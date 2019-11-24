@@ -1,0 +1,704 @@
+2018-12-11 18:12:39.210 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.210 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.218 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.218 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.248 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.248 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.250 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.250 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.251 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.251 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.253 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.253 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.253 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.253 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.257 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.257 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.777 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.777 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.782 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.782 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.868 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.868 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.875 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.875 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.882 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.882 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.885 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.885 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.887 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.887 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.895 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:12:39.895 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.558 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.558 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.574 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.574 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.611 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.611 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.613 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.613 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.614 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.614 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.615 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.615 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.616 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.616 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.619 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.619 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.977 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.977 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.983 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:52.983 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.013 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.013 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.015 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.015 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.016 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.016 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.017 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.017 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.018 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.018 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.020 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:14:53.020 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.196 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.196 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.218 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.218 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.257 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.257 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.258 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.258 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.260 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.260 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.261 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.261 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.262 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.262 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.264 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.264 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.845 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.845 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.851 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.851 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1089) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:900) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1174) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:368) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.880 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.880 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.882 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.882 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.883 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.883 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.884 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.884 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.884 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.884 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.886 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:31:58.886 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:444) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:369) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.022 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.022 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.031 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.031 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.075 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.075 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.077 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.077 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.079 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.079 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.080 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.080 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.081 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.081 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.084 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.084 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.572 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.572 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_activity_chooser_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.580 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.580 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/layout/abc_search_view.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.handleOneTag(APKResourceResolver.java:1085) ~[bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.handleSingleXML(APKResourceResolver.java:896) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractLayoutXML(APKResourceResolver.java:1170) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:364) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.637 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.637 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_btn_borderless_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.640 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.640 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.645 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.645 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_dark.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.648 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.648 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_tab_indicator_material.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.650 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.650 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_list_selector_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.655 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]
+2018-12-11 18:36:31.655 [main] ERROR edu.cwru.android.ui.APKResourceResolver - Error handling XML 'res/drawable/abc_item_background_holo_light.xml'
+java.lang.NullPointerException
+	at edu.cwru.android.ui.APKResourceResolver.extractImageResourceXML(APKResourceResolver.java:440) [bin/:?]
+	at edu.cwru.android.ui.APKResourceResolver.extractARSCAndLayoutFiles(APKResourceResolver.java:365) [bin/:?]
+	at edu.cwru.android.ui.WidgetIDIconMappingMain.main(WidgetIDIconMappingMain.java:73) [bin/:?]

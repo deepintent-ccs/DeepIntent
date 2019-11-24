@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+
+
+		<RollingFile name="Debuglog" fileName="logs/debug.log"
+			filePattern="logs/debug.log-%d{yyyy-MM-dd}-%i.log">
+			<ThresholdFilter level="info" onMatch="DENY"
+				onMismatch="ACCEPT" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+
+		<RollingFile name="Errorlog" fileName="logs/error.log"
+			filePattern="logs/error.log-%d{yyyy-MM-dd}-%i.log">
+			<ThresholdFilter level="error" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+
+
+
+		<RollingFile name="Infolog" fileName="logs/info.log"
+			filePattern="logs/info.log-%d{yyyy-MM-dd}-%i.log">
+
+			<Filters>
+
+				<!-- First deny warn, error and fatal messages -->
+				<ThresholdFilter level="warn" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="error" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="fatal" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+
+				<!-- Then accept info, warn, error, fatal and deny debug/trace -->
+				<ThresholdFilter level="info" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+
+		
+
+	</appenders>
+
+	<loggers>
+
+		<Logger name="edu.cwru.android.ui" level="debug" additivity="true">
+			<appender-ref ref="Infolog" />
+			<appender-ref ref="Errorlog" />
+			<appender-ref ref="Debuglog" />
+		</Logger>
+
+		<root level="error">
+			<appender-ref ref="Console" />
+			<appender-ref ref="Errorlog" />
+		</root>
+	</loggers>
+</configuration>
