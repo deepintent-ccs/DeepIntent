@@ -1,0 +1,495 @@
+<!--
+  tippytipper-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.TippyTipper"
+		id="1">
+		<guiobject type="android.widget.Button" id="btn_one">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$1">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_two">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$2">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_three">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$3">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_four">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$4">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_five">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$5">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_six">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$6">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_seven">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$7">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_eight">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$8">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_nine">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$9">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_zero">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$10">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_delete">
+			<event type="long_click">
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$12">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_delete">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$11">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_clear">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$13">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_clear">
+			<event type="long_click">
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$14">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_ok">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper$15">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper">
+					<target id="2" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="net.mandaria.tippytipper.activities.TippyTipper">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="OptionsMenu" id="2">
+		<attachto type="net.mandaria.tippytipper.activities.TippyTipper" />
+		<guiobject type="android.view.MenuItem" text="settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="about">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="net.mandaria.tippytipper.activities.TippyTipper">
+					<target id="7" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.Total"
+		id="3">
+		<guiobject type="android.widget.SeekBar" id="seek_tip_percentage">
+			<event type="drag">
+				<handler
+					subsig="void onProgressChanged(android.widget.SeekBar,int,boolean)"
+					receiver="net.mandaria.tippytipper.activities.Total$4">
+					<target id="3" />
+				</handler>
+				<handler subsig="void onStartTrackingTouch(android.widget.SeekBar)"
+					receiver="net.mandaria.tippytipper.activities.Total$4">
+					<target id="3" />
+				</handler>
+				<handler subsig="void onStopTrackingTouch(android.widget.SeekBar)"
+					receiver="net.mandaria.tippytipper.activities.Total$4">
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_SplitBill">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$1">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_round_down">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$2">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_round_up">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$3">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_TipAmount1">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$5">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_TipAmount2">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$6">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_TipAmount3">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.Total$7">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="net.mandaria.tippytipper.activities.Total">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="net.mandaria.tippytipper.activities.Total">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="4">
+		<attachto type="net.mandaria.tippytipper.activities.Total" />
+		<guiobject type="android.view.MenuItem" text="settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="net.mandaria.tippytipper.activities.Total">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="about">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="net.mandaria.tippytipper.activities.Total">
+					<target id="7" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.SplitBill"
+		id="5">
+		<guiobject type="android.widget.Button" id="btn_add_person">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.SplitBill$1">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="btn_remove_person">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="net.mandaria.tippytipper.activities.SplitBill$2">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="net.mandaria.tippytipper.activities.SplitBill">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="net.mandaria.tippytipper.activities.SplitBill">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.Settings"
+		id="6">
+		<guiobject type="net.mandaria.tippytipper.activities.Settings">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.About"
+		id="7">
+		<guiobject type="net.mandaria.tippytipper.activities.About">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="OptionsMenu" id="8">
+		<attachto type="net.mandaria.tippytipper.activities.SplitBill" />
+	</window>
+	<window kind="LauncherNode" id="9">
+	    <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+				    <target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="net.mandaria.tippytipper.activities.Test"
+	    id="10">
+		<guiobject type="net.mandaria.tippytipper.activities.Test">
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

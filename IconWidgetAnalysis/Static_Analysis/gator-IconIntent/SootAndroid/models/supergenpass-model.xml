@@ -1,0 +1,480 @@
+<!--
+  supergenpass-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="info.staticfree.SuperGenPass.Super_Gen_Pass"
+		id="1">
+		<guiobject type="android.widget.AutoCompleteTextView" id="domain_edit">
+			<event type="enter_text">
+				<handler subsig="void onTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$9">
+					<target id="1" ripper="detect"/>
+				</handler>
+				<handler
+					subsig="void beforeTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$9">
+					<target id="1" ripper="detect"/>
+				</handler>
+				<handler subsig="void afterTextChanged(android.text.Editable)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$9">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.VisualHashEditText" id="password_edit">
+			<event type="enter_text">
+				<handler subsig="void onTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$10">
+					<target id="1" ripper="detect"/>
+				</handler>
+				<handler
+					subsig="void beforeTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$10">
+					<target id="1" ripper="detect"/>
+				</handler>
+				<handler subsig="void afterTextChanged(android.text.Editable)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$10">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+			<event type="editor_action">
+				<handler
+					subsig="boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="1" ripper="detect"/>
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ToggleButton" id="show_gen_password">
+			<event type="select">
+				<handler
+					subsig="void onCheckedChanged(android.widget.CompoundButton,boolean)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.GeneratedPasswordView"
+			id="password_output">
+			<event type="long_click">
+				<handler subsig="void onCreateContextMenu(android.view.ContextMenu)"
+					receiver="info.staticfree.SuperGenPass.GeneratedPasswordView">
+					<target id="3" />
+				</handler>
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="info.staticfree.SuperGenPass.GeneratedPasswordView">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.GeneratedPasswordView"
+			id="pin_output">
+			<event type="long_click">
+				<handler subsig="void onCreateContextMenu(android.view.ContextMenu)"
+					receiver="info.staticfree.SuperGenPass.GeneratedPasswordView">
+					<target id="3" />
+				</handler>
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="info.staticfree.SuperGenPass.GeneratedPasswordView">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Spinner" id="pin_length">
+			<event type="item_selected">
+				<handler
+					subsig="void onItemSelected(android.widget.AdapterView,android.view.View,int,long)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$4">
+					<target id="1" ripper="detect"/>
+				</handler>
+				<handler subsig="void onNothingSelected(android.widget.AdapterView)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$4">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="2" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.Super_Gen_Pass">
+			<event type="implicit_on_activity_result">
+				<handler subsig="void onActivityResult(int,int,android.content.Intent)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="7" />
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.Super_Gen_Pass">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="OptionsMenu" id="2">
+		<attachto type="info.staticfree.SuperGenPass.Super_Gen_Pass" />
+		<guiobject type="android.view.MenuItem" text="verify">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="about">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="copy">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass">
+					<target id="1" />
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="ContextMenu" id="3">
+		<attachto type="info.staticfree.SuperGenPass.GeneratedPasswordView"
+			id="password_output" />
+		<guiobject type="android.view.MenuItem" text="copy">
+			<event type="click">
+				<handler subsig="boolean onMenuItemClick(android.view.MenuItem)"
+					receiver="info.staticfree.SuperGenPass.GeneratedPasswordView">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.ContextMenu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="4">
+		<context subsig="android.app.Dialog onCreateDialog(int)"
+			receiver="info.staticfree.SuperGenPass.Super_Gen_Pass" />
+		<guiobject type="android.widget.EditText" id="verify">
+			<event type="enter_text">
+				<handler subsig="void onTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$8">
+					<target id="4" />
+				</handler>
+				<handler
+					subsig="void beforeTextChanged(java.lang.CharSequence,int,int,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$8">
+					<target id="4" />
+				</handler>
+				<handler subsig="void afterTextChanged(android.text.Editable)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$8">
+					<target id="1" />
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$7">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="5">
+		<context subsig="android.app.Dialog onCreateDialog(int)"
+			receiver="info.staticfree.SuperGenPass.Super_Gen_Pass" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="info.staticfree.SuperGenPass.Super_Gen_Pass$6">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="info.staticfree.SuperGenPass.Preferences"
+		id="6">
+		<guiobject type="info.staticfree.SuperGenPass.Preferences">
+			<event type="implicit_on_activity_newIntent">
+				<handler subsig="void onNewIntent(android.content.Intent)"
+					receiver="info.staticfree.SuperGenPass.Preferences">
+					<target id="6" ripper="detect"/>
+					<target id="8" />
+					<target id="9" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="info.staticfree.SuperGenPass.Preferences">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="LauncherNode" id="7">
+	    <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+				    <target id="1" />
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="8">
+		<context subsig="android.app.AlertDialog showDownloadDialog()"
+			receiver="com.google.zxing.integration.android.IntentIntegrator" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.google.zxing.integration.android.IntentIntegrator$1">
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.google.zxing.integration.android.IntentIntegrator$2">
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="9">
+		<context subsig="android.app.Dialog onCreateDialog(int)"
+			receiver="info.staticfree.SuperGenPass.Preferences" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="info.staticfree.SuperGenPass.Preferences$4">
+					<target id="8" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="info.staticfree.SuperGenPass.Preferences$3">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

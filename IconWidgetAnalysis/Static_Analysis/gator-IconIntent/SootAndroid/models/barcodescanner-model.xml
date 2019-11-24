@@ -1,0 +1,892 @@
+<!--
+  barcodescanner-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="com.google.zxing.client.android.CaptureActivity"
+		id="1">
+		<guiobject type="com.google.zxing.client.android.CaptureActivity">
+			<event type="press_key">
+				<handler subsig="boolean onKeyDown(int,android.view.KeyEvent)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="1" ripper="detect"/>
+					<target id="17" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_add_contact">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_show_map">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_dial">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_email">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_add_calendar">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_get_directions">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_product_search">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_book_search">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_custom_product_search">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_web_search">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_sms">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_mms">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_share_by_email">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_share_by_sms">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_open_browser">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="shopper_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ISBNResultHandler$1">
+					<target id="19" />
+				</handler>
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ProductResultHandler$1">
+					<target id="19" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button_search_book_contents">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.result.ResultButtonListener">
+					<target id="15" />
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="2" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.CaptureActivity">
+			<event type="implicit_on_activity_result">
+				<handler subsig="void onActivityResult(int,int,android.content.Intent)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.CaptureActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="17" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="2">
+		<attachto type="com.google.zxing.client.android.CaptureActivity" />
+		<guiobject type="android.view.MenuItem" text="menu_share">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="menu_history">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="menu_settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="9" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="menu_help">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.CaptureActivity">
+					<target id="10" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity"
+		type="com.google.zxing.client.android.share.ShareActivity" id="3">
+		<guiobject type="android.widget.Button" id="share_app_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.share.ShareActivity$3">
+					<target id="11" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="share_contact_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.share.ShareActivity$1">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="share_bookmark_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.share.ShareActivity$2">
+					<target id="12" ripper="detect"/>
+					<target id="3"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="share_clipboard_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.share.ShareActivity$4">
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.EditText" id="share_text_view">
+			<event type="press_key">
+				<handler
+					subsig="boolean onKey(android.view.View,int,android.view.KeyEvent)"
+					receiver="com.google.zxing.client.android.share.ShareActivity$5">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.share.ShareActivity">
+			<event type="implicit_on_activity_result">
+				<handler subsig="void onActivityResult(int,int,android.content.Intent)"
+					receiver="com.google.zxing.client.android.share.ShareActivity">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.share.ShareActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity"
+		type="com.google.zxing.client.android.history.HistoryActivity" id="4">
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="item_click">
+				<handler
+					subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="1" />
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+			<event type="long_click">
+				<handler
+					subsig="void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="5" />
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="6" />
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.history.HistoryActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="ContextMenu" id="5">
+		<attachto type="android.widget.ListView" />
+		<guiobject type="android.view.MenuItem" text="Clear">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.ContextMenu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="6">
+		<attachto type="com.google.zxing.client.android.history.HistoryActivity" />
+		<guiobject type="android.view.MenuItem" id="menu_history_send">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="4" />
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="menu_history_clear_text">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity">
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="7">
+		<context subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+			receiver="com.google.zxing.client.android.history.HistoryActivity" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="8">
+		<context subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+			receiver="com.google.zxing.client.android.history.HistoryActivity" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.google.zxing.client.android.history.HistoryActivity$1">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity"
+		type="com.google.zxing.client.android.PreferencesActivity" id="9">
+		<guiobject type="com.google.zxing.client.android.PreferencesActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="com.google.zxing.client.android.HelpActivity"
+		id="10">
+		<guiobject type="com.google.zxing.client.android.HelpActivity">
+			<event type="press_key">
+				<handler subsig="boolean onKeyDown(int,android.view.KeyEvent)"
+					receiver="com.google.zxing.client.android.HelpActivity">
+					<target id="10" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.HelpActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity"
+		type="com.google.zxing.client.android.share.AppPickerActivity" id="11">
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="item_click">
+				<handler
+					subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+					receiver="com.google.zxing.client.android.share.AppPickerActivity">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.share.AppPickerActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity"
+		type="com.google.zxing.client.android.share.BookmarkPickerActivity"
+		id="12">
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="item_click">
+				<handler
+					subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+					receiver="com.google.zxing.client.android.share.BookmarkPickerActivity">
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.share.BookmarkPickerActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity"
+		type="com.google.zxing.client.android.encode.EncodeActivity" id="13">
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="com.google.zxing.client.android.encode.EncodeActivity">
+					<target id="14" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.encode.EncodeActivity">
+		    <event type="implicit_back_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="OptionsMenu" id="14">
+		<attachto type="com.google.zxing.client.android.encode.EncodeActivity" />
+		<guiobject type="android.view.MenuItem" text="menu_share">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.encode.EncodeActivity">
+					<target id="13" ripper="detect"/>
+					<target id="16" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="menu_encode">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.google.zxing.client.android.encode.EncodeActivity">
+					<target id="13" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="14" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="com.google.zxing.client.android.book.SearchBookContentsActivity"
+		id="15">
+		<guiobject type="android.widget.Button" id="query_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.google.zxing.client.android.book.SearchBookContentsActivity$1">
+					<target id="15" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.EditText" id="query_text_view">
+			<event type="press_key">
+				<handler
+					subsig="boolean onKey(android.view.View,int,android.view.KeyEvent)"
+					receiver="com.google.zxing.client.android.book.SearchBookContentsActivity$2">
+					<target id="15" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ListView" id="result_list_view">
+			<event type="item_click">
+				<handler
+					subsig="void onItemClick(android.widget.AdapterView,android.view.View,int,long)"
+					receiver="com.google.zxing.client.android.book.BrowseBookListener">
+					<target id="15" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.google.zxing.client.android.book.SearchBookContentsActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="15" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="15" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="15" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="16">
+		<context subsig="void showErrorMessage(int)"
+			receiver="com.google.zxing.client.android.encode.EncodeActivity" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.google.zxing.client.android.FinishListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="dialog_cancel">
+				<handler subsig="void onCancel(android.content.DialogInterface)"
+					receiver="com.google.zxing.client.android.FinishListener">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="16" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="16" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="LauncherNode" id="17">
+	    <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+				    <target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="18">
+		<context subsig="void displayFrameworkBugMessageAndExit()"
+			receiver="com.google.zxing.client.android.CaptureActivity" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.google.zxing.client.android.FinishListener">
+					<target id="17" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="dialog_cancel">
+				<handler subsig="void onCancel(android.content.DialogInterface)"
+					receiver="com.google.zxing.client.android.FinishListener">
+					<target id="17" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="18" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="18" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="19">
+		<context subsig="void openGoogleShopper(java.lang.String)"
+			receiver="com.google.zxing.client.android.result.ResultHandler" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="19" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="19" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>

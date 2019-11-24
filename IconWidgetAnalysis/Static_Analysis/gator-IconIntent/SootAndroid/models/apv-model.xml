@@ -1,0 +1,747 @@
+<!--
+  apv-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="cx.hell.android.pdfview.ChooseFileActivity"
+		id="1">
+		<guiobject type="android.widget.ListView" id="files">
+			<event type="item_click">
+				<handler
+					subsig="void onItemClick(android.widget.AdapterView,android.view.View,int,long)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="4" ripper="detect"/>
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+			<event type="long_click">
+				<handler
+					subsig="void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="2" ripper="detect"/>
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="cx.hell.android.pdfview.ChooseFileActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+					<target id="14" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="ContextMenu" id="2">
+		<attachto type="android.widget.ListView" id="files" />
+		<guiobject type="android.view.MenuItem" text="Remove from recent">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Set current folder as home">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Delete file">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.ContextMenu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="3">
+		<attachto type="cx.hell.android.pdfview.ChooseFileActivity" />
+		<guiobject type="android.view.MenuItem" text="Set current folder as home">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="About">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="11" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.ChooseFileActivity">
+					<target id="10" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="cx.hell.android.pdfview.OpenFileActivity"
+		id="4">
+		<guiobject type="android.widget.ImageButton">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="cx.hell.android.pdfview.OpenFileActivity$7">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="long_click">
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$6">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="cx.hell.android.pdfview.OpenFileActivity$8">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="long_click">
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$9">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$10">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="long_click">
+				<handler subsig="boolean onLongClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$11">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$16">
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton">
+			<event type="long_click">
+				<handler
+					subsig="void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="cx.hell.android.pdfview.OpenFileActivity$3">
+					<target id="4" />
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="cx.hell.android.pdfview.OpenFileActivity$4">
+					<target id="4" />
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="cx.hell.android.pdfview.OpenFileActivity$5">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="9" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="cx.hell.android.lib.pagesview.PagesView">
+			<event type="press_key">
+				<handler
+					subsig="boolean onKey(android.view.View,int,android.view.KeyEvent)"
+					receiver="cx.hell.android.lib.pagesview.PagesView">
+					<target id="4" ripper="detect"/>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="touch">
+				<handler
+					subsig="boolean onTouch(android.view.View,android.view.MotionEvent)"
+					receiver="cx.hell.android.lib.pagesview.PagesView">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<!--guiobject type="cx.hell.android.pdfview.OpenFileActivity">
+			<event type="implicit_lifecycle_event">
+				<handler subsig="void onCreate(android.os.Bundle)" receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject-->
+		<guiobject type="cx.hell.android.pdfview.OpenFileActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="ContextMenu" id="5">
+		<attachto type="android.widget.ImageButton" />
+		<guiobject type="android.view.MenuItem" text="Go to page…">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="About">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="11" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rotate left">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rotate right">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Open…">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Settings">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="10" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Find…">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Clear find">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.ContextMenu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="6">
+		<context subsig="void showGotoPageDialog()" receiver="cx.hell.android.pdfview.OpenFileActivity" />
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$12">
+					<target id="4" ripper="detect"/>
+					<target id="12" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$13">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$14">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.Dialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="7">
+		<context subsig="void showFindDialog()" receiver="cx.hell.android.pdfview.OpenFileActivity" />
+		<guiobject type="android.widget.Button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$15">
+					<target id="8" />
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.Dialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="8">
+		<context subsig="void run()"
+			receiver="cx.hell.android.pdfview.OpenFileActivity$Finder$1" />
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$Finder">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="dialog_cancel">
+				<handler subsig="void onCancel(android.content.DialogInterface)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity$Finder">
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+		    <event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="9">
+		<attachto type="cx.hell.android.pdfview.OpenFileActivity" />
+		<guiobject type="android.view.MenuItem" text="Go to page…">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rotate left">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rotate right">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Open…">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Settings">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="10" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Find…">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="7" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Clear find">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="About">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="cx.hell.android.pdfview.OpenFileActivity">
+					<target id="11" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="cx.hell.android.pdfview.Options"
+		id="10">
+		<guiobject type="cx.hell.android.pdfview.Options">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="cx.hell.android.pdfview.AboutPDFViewActivity"
+		id="11">
+		<guiobject type="cx.hell.android.pdfview.AboutPDFViewActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="12">
+		<context subsig="void errorMessage(java.lang.String)"
+			receiver="cx.hell.android.pdfview.OpenFileActivity" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="13">
+		<context subsig="void run()" receiver="cx.hell.android.lib.pagesview.PagesView$3" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="cx.hell.android.lib.pagesview.PagesView$3$1">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="dialog_cancel">
+				<handler subsig="void onCancel(android.content.DialogInterface)"
+					receiver="cx.hell.android.lib.pagesview.PagesView$3$2">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="LauncherNode" id="14">
+	     <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+				    <target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>

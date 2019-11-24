@@ -1,0 +1,25 @@
+#!/bin/bash
+# browse.sh - part of the LeakDroid project
+#
+# Copyright (c) 2013, The Ohio State University
+#
+# This file is distributed under the terms described in LICENSE in the root
+# directory.
+
+# Opens a directory or directories of pictures for browse. Assume command line
+# arguments are directory names.
+OS=`uname`
+case $OS in
+ Darwin)
+    open $*
+  ;;
+
+  Linux | SunOS)
+    eog $*
+  ;;
+
+  *)
+    echo "ERROR: unkown OS $OS"
+    exit -1
+esac
+

@@ -1,0 +1,828 @@
+<!--
+  openmanager-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="com.nexes.manager.Main" id="1">
+		<guiobject type="com.nexes.manager.Main">
+			<event type="press_key">
+				<handler subsig="boolean onKeyDown(int,android.view.KeyEvent)"
+					receiver="com.nexes.manager.Main">
+					<target id="16" />
+					<target id="8" />
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="back_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="home_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="manage_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="2" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="multiselect_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="hidden_attach">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="hidden_delete">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="3" ripper="detect"/>
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="hidden_copy">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="hidden_move">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="info_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="4" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="help_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="item_click">
+				<handler
+					subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" ripper="detect"/>
+					<!-- target id="16" /-->
+					<target id="17" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="long_click">
+				<handler
+					subsig="void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)"
+					receiver="com.nexes.manager.Main">
+					<target id="6" ripper="detect"/>
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="com.nexes.manager.Main">
+					<target id="9" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.Main">
+			<event type="implicit_on_activity_result">
+				<handler subsig="void onActivityResult(int,int,android.content.Intent)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.Main">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="16" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="2">
+		<context subsig="void display_dialog(int)" receiver="com.nexes.manager.EventHandler" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="3">
+		<context subsig="void onClick(android.view.View)" receiver="com.nexes.manager.EventHandler" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.nexes.manager.EventHandler$1">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.nexes.manager.EventHandler$2">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="com.nexes.manager.DirectoryInfo" id="4">
+		<guiobject type="android.widget.Button" id="back_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)"
+					receiver="com.nexes.manager.DirectoryInfo$ButtonHandler">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.DirectoryInfo">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="com.nexes.manager.HelpManager" id="5">
+		<guiobject type="android.widget.Button" id="help_email_bt">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.HelpManager">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="help_website_bt">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.HelpManager">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.HelpManager">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="ContextMenu" id="6">
+		<attachto type="android.widget.ListView" id="list" />
+		<guiobject type="android.view.MenuItem" text="Delete Folder"
+			id="D_MENU_DELETE">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="7" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rename Folder"
+			id="D_MENU_RENAME">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="8" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Copy Folder"
+			id="D_MENU_COPY">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Move(Cut) Folder"
+			id="D_MENU_MOVE">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Zip Folder"
+			id="D_MENU_ZIP">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Paste into folder"
+			id="D_MENU_PASTE">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Extract here"
+			id="D_MENU_UNZIP">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Delete File"
+			id="F_MENU_DELETE">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="7"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Rename File"
+			id="F_MENU_RENAME">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="8"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Copy File" id="F_MENU_COPY">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Move(Cut) File"
+			id="F_MENU_MOVE">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Email File"
+			id="F_MENU_ATTACH">
+			<event type="click">
+				<handler subsig="boolean onContextItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.ContextMenu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="7">
+		<context subsig="boolean onContextItemSelected(android.view.MenuItem)"
+			receiver="com.nexes.manager.Main" />
+		<guiobject type="android.widget.Button" id="button1">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.nexes.manager.Main$3">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="button2">
+			<event type="click">
+				<handler subsig="void onClick(android.content.DialogInterface,int)"
+					receiver="com.nexes.manager.Main$2">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="8">
+		<context subsig="android.app.Dialog onCreateDialog(int)"
+			receiver="com.nexes.manager.Main" />
+		<guiobject type="android.widget.Button" id="input_create_b">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$4">
+					<target id="1" />
+				</handler>
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$8">
+					<target id="1" />
+				</handler>
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$6">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.Button" id="input_cancel_b">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$5">
+					<target id="1" />
+				</handler>
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$9">
+					<target id="1" />
+				</handler>
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Main$7">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.app.Dialog">
+			<event type="implicit_back_event">
+				<handler>
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="8" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="OptionsMenu" id="9">
+		<attachto type="com.nexes.manager.Main" />
+		<guiobject type="android.view.MenuItem" text="New Directory"
+			id="MENU_MKDIR">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="8" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Search" id="MENU_SEARCH">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="8" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Settings" id="MENU_SETTING">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="13" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Quit" id="MENU_QUIT">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="com.nexes.manager.Main">
+					<target id="16" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="9" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="com.nexes.manager.ProcessManager" id="10">
+		<guiobject type="android.widget.ListView" id="list">
+			<event type="item_click">
+				<handler
+					subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+					receiver="com.nexes.manager.ProcessManager">
+					<target id="11" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.ProcessManager">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="11">
+		<context
+			subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+			receiver="com.nexes.manager.ProcessManager" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="10" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="11" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Activity" type="com.nexes.manager.ApplicationBackup" id="12">
+		<guiobject type="android.widget.Button" id="backup_button_all">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.ApplicationBackup">
+					<target id="12" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.ApplicationBackup">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="12" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="com.nexes.manager.Settings" id="13">
+		<guiobject type="android.widget.ImageButton" id="setting_text_color_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Settings$1">
+					<target id="14" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.CheckBox" id="setting_hidden_box">
+			<event type="select">
+				<handler
+					subsig="void onCheckedChanged(android.widget.CompoundButton,boolean)"
+					receiver="com.nexes.manager.Settings$2">
+					<target id="13" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.CheckBox" id="setting_thumbnail_box">
+			<event type="select">
+				<handler
+					subsig="void onCheckedChanged(android.widget.CompoundButton,boolean)"
+					receiver="com.nexes.manager.Settings$3">
+					<target id="13" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.CheckBox" id="setting_storage_box">
+			<event type="select">
+				<handler
+					subsig="void onCheckedChanged(android.widget.CompoundButton,boolean)"
+					receiver="com.nexes.manager.Settings$4">
+					<target id="13" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.ImageButton" id="settings_sort_button">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Settings$5">
+					<target id="15" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="com.nexes.manager.Settings">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="14">
+		<context subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Settings$1" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="14" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="14" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="15">
+		<context subsig="void onClick(android.view.View)" receiver="com.nexes.manager.Settings$5" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="13" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="15" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="15" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="LauncherNode" id="16">
+	    <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+	<window kind="Dialog" id="17">
+		<context
+			subsig="void onListItemClick(android.widget.ListView,android.view.View,int,long)"
+			receiver="com.nexes.manager.Main" />
+		<guiobject type="android.app.AlertDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="17" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="17" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>
+
+
+
+
+
+
+
+
+
+
+
+
+

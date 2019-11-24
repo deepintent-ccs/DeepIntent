@@ -1,0 +1,427 @@
+
+* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+No process found for: cx.hell.android.pdfview
+No process found for: cx.hell.android.pdfview
+Applications Memory Usage (kB):
+Uptime: 43978 Realtime: 43978
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     4976     5703      N/A    10679
+       allocated:     4971     3050      N/A     8021
+            free:        4     2653      N/A     2657
+           (Pss):     1023     1421     4817     7261
+  (shared dirty):     2192     1856     7920    11968
+    (priv dirty):      884      196     2440     3520
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        5    Proxy Binders:       11
+Death Recipients:        0
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:        0
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+--- BEGIN apv cx.hell.android.pdfview.test.TestNeutralCycles#testNeutralCycle001
+Applications Memory Usage (kB):
+Uptime: 52668 Realtime: 52668
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9624     6599      N/A    16223
+       allocated:     9400     3782      N/A    13182
+            free:      103     2817      N/A     2920
+           (Pss):     2571     1604    11251    15426
+  (shared dirty):     2152     1852    10216    14220
+    (priv dirty):     2436      240     6880     9556
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 54177 Realtime: 54176
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9624     6599      N/A    16223
+       allocated:     9401     3824      N/A    13225
+            free:      102     2775      N/A     2877
+           (Pss):     2571     1605    11255    15431
+  (shared dirty):     2152     1852    10216    14220
+    (priv dirty):     2436      240     6884     9560
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 1
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 62793 Realtime: 62793
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9624     6791      N/A    16415
+       allocated:     9407     4128      N/A    13535
+            free:       96     2663      N/A     2759
+           (Pss):     2571     1604    11542    15717
+  (shared dirty):     2152     1852    10216    14220
+    (priv dirty):     2436      240     7172     9848
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 64323 Realtime: 64323
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6791      N/A    16451
+       allocated:     9504     4171      N/A    13675
+            free:       35     2620      N/A     2655
+           (Pss):     2607     1604    11586    15797
+  (shared dirty):     2152     1852    10216    14220
+    (priv dirty):     2472      240     7216     9928
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 2
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 73093 Realtime: 73093
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6919      N/A    16579
+       allocated:     9511     4309      N/A    13820
+            free:       28     2610      N/A     2638
+           (Pss):     2607     1604    11729    15940
+  (shared dirty):     2152     1852    10216    14220
+    (priv dirty):     2472      240     7360    10072
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 74713 Realtime: 74713
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9404     2917      N/A    12321
+            free:      135     4066      N/A     4201
+           (Pss):     2607     1604    11982    16193
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2472      240     7616    10328
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 3
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 83431 Realtime: 83431
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9406     3035      N/A    12441
+            free:      117     3948      N/A     4065
+           (Pss):     2591     1604    10862    15057
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2456      240     6496     9192
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 4
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 85042 Realtime: 85042
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9407     3087      N/A    12494
+            free:      116     3896      N/A     4012
+           (Pss):     2591     1604    10866    15061
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2456      240     6500     9196
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 5
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 93715 Realtime: 93715
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9410     3202      N/A    12612
+            free:      113     3781      N/A     3894
+           (Pss):     2591     1604    10893    15088
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2456      240     6528     9224
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 95181 Realtime: 95181
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9410     3234      N/A    12644
+            free:      113     3749      N/A     3862
+           (Pss):     2591     1604    10925    15120
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2456      240     6560     9256
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 6
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 103835 Realtime: 103835
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9660     6983      N/A    16643
+       allocated:     9419     3340      N/A    12759
+            free:      136     3643      N/A     3779
+           (Pss):     2623     1604    11009    15236
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2488      240     6644     9372
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 105300 Realtime: 105300
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9684     6983      N/A    16667
+       allocated:     9426     3420      N/A    12846
+            free:      137     3563      N/A     3700
+           (Pss):     2631     1604    11089    15324
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2496      240     6724     9460
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 7
+THREAD: 7
+Applications Memory Usage (kB):
+Uptime: 113959 Realtime: 113959
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9684     6983      N/A    16667
+       allocated:     9429     3524      N/A    12953
+            free:      134     3459      N/A     3593
+           (Pss):     2631     1604    11192    15427
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2496      240     6828     9564
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+Applications Memory Usage (kB):
+Uptime: 115568 Realtime: 115568
+
+** MEMINFO in pid 330 [cx.hell.android.pdfview] **
+                    native   dalvik    other    total
+            size:     9684     6983      N/A    16667
+       allocated:     9429     3556      N/A    12985
+            free:      134     3427      N/A     3561
+           (Pss):     2631     1604    11228    15463
+  (shared dirty):     2152     1852    10192    14196
+    (priv dirty):     2496      240     6864     9600
+ 
+ Objects
+           Views:        0        ViewRoots:        0
+     AppContexts:        0       Activities:        0
+          Assets:        3    AssetManagers:        3
+   Local Binders:        7    Proxy Binders:       13
+Death Recipients:        1
+ OpenSSL Sockets:        0
+ 
+ SQL
+               heap:        0         MEMORY_USED:        0
+ PAGECACHE_OVERFLOW:        0         MALLOC_SIZE:       50
+ 
+ 
+ Asset Allocations
+    zip:/data/app/cx.hell.android.pdfview.test-2.apk:/resources.arsc: 1K
+REP 8
+THREAD: 7

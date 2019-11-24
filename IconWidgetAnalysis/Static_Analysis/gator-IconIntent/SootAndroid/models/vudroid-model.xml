@@ -1,0 +1,293 @@
+<!--
+  vudroid-model.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<model>
+	<window kind="Activity" type="org.vudroid.core.MainBrowserActivity" id="1">
+		<guiobject type="android.widget.ListView">
+			<event type="item_click">
+				<handler
+					subsig="void onItemClick(android.widget.AdapterView,android.view.View,int,long)"
+					receiver="org.vudroid.core.BaseBrowserActivity$1">
+					<target id="1" ripper="detect"/>
+					<target id="2" ripper="detect"/>
+					<target id="6" ripper="detect"/>
+				</handler>
+				<handler
+					subsig="void onItemClick(android.widget.AdapterView,android.view.View,int,long)"
+					receiver="org.vudroid.core.BaseBrowserActivity$4">
+					<target id="2" />
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="org.vudroid.core.MainBrowserActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="4" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="org.vudroid.djvudroid.DjvuViewerActivity" id="2">
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="3" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="org.vudroid.djvudroid.DjvuViewerActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="3">
+		<attachto type="org.vudroid.djvudroid.DjvuViewerActivity" />
+		<guiobject type="android.view.MenuItem" text="Full screen">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="2" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Go to page">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Exit">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="3" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="2" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="LauncherNode" id="4">
+	     <guiobject type="presto.android.gui.stubs.PrestoFakeLauncherNodeClass">
+			<event type="implicit_launch_event">
+				<handler>
+				    <target id="1" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Dialog" id="5">
+		<context subsig="android.app.Dialog onCreateDialog(int)"
+			receiver="org.vudroid.core.BaseViewerActivity" />
+		<guiobject type="android.widget.Button" id="goToButton">
+			<event type="click">
+				<handler subsig="void onClick(android.view.View)" receiver="org.vudroid.core.GoToPageDialog$1">
+					<target id="2" ripper="detect"/>
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.widget.EditText" id="pageNumberTextEdit">
+			<event type="editor_action">
+				<handler
+					subsig="boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)"
+					receiver="org.vudroid.core.GoToPageDialog$2">
+					<target id="2" />
+					<target id="6" />
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="org.vudroid.core.GoToPageDialog">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="2" />
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="2" />
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="5" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="Activity" type="org.vudroid.pdfdroid.PdfViewerActivity" id="6">
+		<guiobject type="android.view.Menu" text="OptionsMenu">
+			<event type="click">
+				<handler subsig="boolean onCreateOptionsMenu(android.view.Menu)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="7" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="org.vudroid.pdfdroid.PdfViewerActivity">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="1" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+
+	<window kind="OptionsMenu" id="7">
+		<attachto type="org.vudroid.pdfdroid.PdfViewerActivity" />
+		<guiobject type="android.view.MenuItem" text="Full screen">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="6" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Go to page">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="5" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.MenuItem" text="Exit">
+			<event type="click">
+				<handler subsig="boolean onOptionsItemSelected(android.view.MenuItem)"
+					receiver="org.vudroid.core.BaseViewerActivity">
+					<target id="1" ripper="detect"/>
+				</handler>
+			</event>
+		</guiobject>
+		<guiobject type="android.view.Menu">
+			<event type="implicit_back_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_rotate_event">
+				<handler>
+					<target id="7" />
+				</handler>
+			</event>
+			<event type="implicit_home_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+			<event type="implicit_power_event">
+				<handler>
+					<target id="6" />
+				</handler>
+			</event>
+		</guiobject>
+	</window>
+</model>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
