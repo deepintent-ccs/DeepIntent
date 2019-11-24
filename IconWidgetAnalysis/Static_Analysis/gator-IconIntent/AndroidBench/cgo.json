@@ -1,0 +1,134 @@
+{
+	"BASE_DIR"		: "",
+	"BASE_PARAM"	: "",
+	"BASE_CLIENT"	: "",
+	"BASE_CLIENT_PARAM"	: "",
+
+	"apv"	: {
+		"relative-path"	: "apv/pdfview",
+		"abs-path"	: "",
+		"api-level"	: "android-10",
+		"zip-file"	: "apv/apv-0.4.0.zip",
+		"abs-zip-file"	:	"",
+		"extra-lib"	: "",
+		"append-param" : "",
+		"append-client-param"	: "",
+		"override-client"	: "",
+		"override-param" : "",
+		"override-client-param"	: ""
+	},
+	"astrid"	:	{
+		"relative-path" : "astrid/astrid/astrid",
+		"api-level"	:	"android-14",
+		"zip-file"	: "astrid/astrid-4.6.3.zip",
+		"append-param" : ""
+	},
+	"barcodescanner": {
+		"relative-path"	: "BarcodeScanner/BarcodeScanner-4.4/android/",
+		"api-level" : "google-17",
+		"zip-file"	: "BarcodeScanner/BarcodeScanner-4.4.zip",
+		"append-param" : ""
+	},
+	"beem": {
+		"relative-path"	: "Beem/Beem-0.1.8",
+		"api-level" : "google-16",
+		"zip-file"	: "Beem/Beem-0.1.8.zip",
+		"append-param" : ""
+	},
+	"connectbot": {
+		"relative-path"	: "ConnectBot/connectbot",
+		"api-level" : "android-15",
+		"zip-file"	: "ConnectBot/ConnectBot-c6cc322.zip",
+		"append-param" : ""
+	},
+	"fbreader": {
+		"relative-path"	: "FBReader/FBReaderJ",
+		"api-level" : "android-14",
+		"zip-file"	: "FBReader/fbreader-1.7.8.zip",
+		"append-param" : ""
+	},
+	"k9": {
+		"relative-path"	: "k9/k-9",
+		"api-level" : "android-15",
+		"zip-file"	: "k9/k9-4.330.zip",
+		"append-param" : ""
+	},
+	"keepassdroid": {
+		"relative-path"	: "KeePassDroid/keepassdroid",
+		"api-level" : "android-14",
+		"zip-file"	: "KeePassDroid/KeePassDroid-v1.99.6.zip",
+		"append-param" : ""
+	},
+	"mileage": {
+		"relative-path"	: "Mileage/android-mileage-3.1.1",
+		"api-level" : "android-10",
+		"zip-file"	: "Mileage/android-mileage-3.1.1.zip",
+		"append-param" : ""
+	},
+	"mytracks": {
+		"relative-path"	: "MyTracks/mytracks-v2.0.4/MyTracks",
+		"api-level" : "google-17",
+		"zip-file"	: "MyTracks/mytracks-v2.0.4.zip",
+		"append-param" : ""
+	},
+	"notepad": {
+		"relative-path"	: "NotePad/notepad-master/NotePad",
+		"api-level" : "google-15",
+		"zip-file"	: "NotePad/notepad-5b0fa10.zip",
+		"append-param" : ""
+	},
+	"npr": {
+		"relative-path"	: "NPR/npr-2.4/Npr",
+		"api-level" : "google-8",
+		"zip-file"	: "NPR/npr-2.4.zip",
+		"append-param" : ""
+	},
+	"openmanager": {
+		"relative-path"	: "OpenManager/Android-File-Manager-master/",
+		"api-level" : "android-8",
+		"zip-file"	: "OpenManager/OpenManager-51fece5.zip",
+		"append-param" : ""
+	},
+	"opensudoku": {
+		"relative-path"	: "OpenSudoku/OpenSudoku-1558f8b",
+		"api-level" : "android-10",
+		"zip-file"	: "OpenSudoku/OpenSudoku-1558f8b.zip",
+		"append-param" : ""
+	},
+	"sipdroid": {
+		"relative-path"	: "SipDroid/sipdroid-3.1beta",
+		"api-level" : "android-8",
+		"zip-file"	: "SipDroid/sipdroid-3.1beta.zip",
+		"append-param" : ""
+	},
+	"supergenpass": {
+		"relative-path"	: "SuperGenPass/SuperGenPass-2.2.2",
+		"api-level" : "google-16",
+		"zip-file"	: "SuperGenPass/SuperGenPass-2.2.2.zip",
+		"append-param" : ""
+	},
+	"tippytipper": {
+		"relative-path"	: "TippyTipper/tippytipper-1.2",
+		"api-level" : "google-8",
+		"zip-file"	: "TippyTipper/tippytipper-1.2.zip",
+		"append-param" : ""
+	},
+	"vlc": {
+		"relative-path"	: "VLC/vlc-android/vlc-android",
+		"api-level" : "android-17",
+		"zip-file"	: "VLC/vlc-0.0.11.zip",
+		"append-param" : ""
+	},
+	"vudroid": {
+		"relative-path"	: "VuDroid/vudroid-1.4",
+		"api-level" : "android-8",
+		"zip-file"	: "VuDroid/vudroid-1.4.zip",
+		"append-param" : ""
+	},
+	"xbmc": {
+		"relative-path"	: "XBMC/android-xbmcremote-0.8.8",
+		"api-level" : "android-10",
+		"zip-file"	: "XBMC/XBMC-0.8.8.zip",
+		"append-param" : ""
+	}
+}

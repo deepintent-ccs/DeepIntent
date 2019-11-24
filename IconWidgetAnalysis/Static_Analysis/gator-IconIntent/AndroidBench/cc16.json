@@ -1,0 +1,104 @@
+{
+	"BASE_DIR"		: "",
+	"BASE_PARAM"	: "-resolveContext",
+	"BASE_CLIENT"	: "EnergyAnalysisClient",
+	"BASE_CLIENT_PARAM"	: "-clientParam WTPK5",
+
+	"osmdroid"	: {
+		"relative-path"	: "osmdroid/osmdroid-pack/OpenStreetMapViewer",
+		"abs-path"	: "",
+		"api-level"	: "android-8",
+		"zip-file"	: "osmdroid/osmdroid-pack.zip",
+		"abs-zip-file"	:	"",
+		"extra-lib"	: "",
+		"append-param" : "",
+		"append-client-param"	: "",
+		"override-client"	: "",
+		"override-param" : "",
+		"override-client-param"	: ""
+	},
+	"recycle-locator"	:	{
+		"relative-path" : "recycle-locator/FindItNow",
+		"api-level"	:	"google-8",
+		"zip-file"	: "recycle-locator/FindItNow.zip",
+		"append-param" : ""
+	},
+	"sofia": {
+		"relative-path"	: "sofia/sofia-pack",
+		"api-level" : "google-8",
+		"zip-file"	: "sofia/sofia-pack.zip",
+		"append-param" : ""
+	},
+	"ushahidi": {
+		"relative-path"	: "ushahidi/ushahidi-pack",
+		"api-level" : "google-10",
+		"zip-file"	: "ushahidi/ushahidi-pack.zip",
+		"append-param" : ""
+	},
+	"droidar": {
+		"relative-path"	: "droidar/droidar-pack/droidar/DroidAR",
+		"api-level" : "android-8",
+		"zip-file"	: "droidar/droidar-pack.zip",
+		"append-param" : ""
+	},
+	"osmdroid-fixed": {
+		"relative-path"	: "osmdroid-fixed/osmdroid_fixed-pack/OpenStreetMapViewer",
+		"api-level" : "google-8",
+		"zip-file"	: "osmdroid-fixed/osmdroid_fixed-pack.zip",
+		"append-param" : ""
+	},
+	"recycle-locator-fixed": {
+		"relative-path"	: "recycle-locator_fixed/FindItNow",
+		"api-level" : "google-8",
+		"zip-file"	: "recycle-locator_fixed/FindItNow.zip",
+		"append-param" : ""
+	},
+	"sofia-fixed": {
+		"relative-path"	: "sofia_fixed/sofia_fixed-pack",
+		"api-level" : "google-8",
+		"zip-file"	: "sofia_fixed/sofia_fixed-pack.zip",
+		"append-param" : ""
+	},
+	"ushahidi-fixed": {
+		"relative-path"	: "ushahidi_fixed/ushahidi_fixed-pack",
+		"api-level" : "google-10",
+		"zip-file"	: "ushahidi_fixed/ushahidi_fixed-pack.zip",
+		"append-param" : ""
+	},
+	"droidar-fixed": {
+		"relative-path"	: "droidar_fixed/droidar_fixed-pack/droidar/DroidAR",
+		"api-level" : "android-8",
+		"zip-file"	: "droidar_fixed/droidar_fixed-pack.zip",
+		"append-param" : ""
+	},
+	"speedometer": {
+		"relative-path"	: "speedometer/speedometer-pack",
+		"api-level" : "android-8",
+		"zip-file"	: "speedometer/speedometer-pack.zip",
+		"append-param" : ""
+	},
+	"heregps": {
+		"relative-path"	: "heregps/heregps-pack",
+		"api-level" : "android-17",
+		"zip-file"	: "heregps/heregps-pack.zip",
+		"append-param" : ""
+	},
+	"whereami": {
+		"relative-path"	: "whereami/whereami-pack",
+		"api-level" : "android-17",
+		"zip-file"	: "whereami/whereami-pack.zip",
+		"append-param" : ""
+	},
+	"locdemo": {
+		"relative-path"	: "locdemo/master/android/LocDemo",
+		"api-level" : "android-17",
+		"zip-file"	: "locdemo/master.zip",
+		"append-param" : ""
+	},
+	"wigle": {
+		"relative-path"	: "wigle/wigle-pack",
+		"api-level" : "android-17",
+		"zip-file"	: "wigle/wigle-pack.zip",
+		"append-param" : ""
+	}
+}

@@ -1,0 +1,158 @@
+I: Using Apktool 2.2.1 on DroidDream.apk
+I: Loading resource table...
+I: Decoding AndroidManifest.xml with resources...
+I: Loading resource table from file: /Users/xushengxiao/Library/apktool/framework/1.apk
+I: Regular manifest package...
+I: Decoding file-resources...
+I: Decoding values */* XMLs...
+I: Baksmaling classes.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+Soot started on Wed Apr 12 21:58:28 EDT 2017
+Warning: com.android.internal.widget.ButtonBarLayout is a phantom class!
+Warning: android.widget.DayPickerViewPager is a phantom class!
+Warning: com.android.internal.view.menu.IconMenuView is a phantom class!
+Warning: android.widget.AppSecurityPermissions$PermissionItemView is a phantom class!
+Warning: android.widget.DayPickerView is a phantom class!
+Warning: com.android.internal.widget.ActionBarOverlayLayout is a phantom class!
+Warning: com.android.internal.widget.ActionBarView is a phantom class!
+Warning: com.android.internal.app.AlertController$RecycleListView is a phantom class!
+Warning: com.android.internal.view.menu.ActionMenuItemView is a phantom class!
+Warning: com.android.internal.view.menu.IconMenuItemView is a phantom class!
+Warning: com.android.internal.widget.PreferenceImageView is a phantom class!
+Warning: com.android.internal.view.menu.ListMenuItemView is a phantom class!
+Warning: com.android.internal.widget.ActionBarContextView is a phantom class!
+Warning: com.android.internal.R$layout is a phantom class!
+Warning: android.app.SearchDialog$SearchBar is a phantom class!
+Warning: com.android.internal.widget.DialogTitle is a phantom class!
+Warning: com.android.internal.widget.DrawingSpace is a phantom class!
+Warning: com.android.internal.R$string is a phantom class!
+Warning: com.android.internal.view.menu.ExpandedMenuView is a phantom class!
+Warning: com.android.internal.widget.SwipeDismissLayout is a phantom class!
+Warning: com.android.internal.widget.WeightedLinearLayout is a phantom class!
+Warning: com.android.internal.R$menu is a phantom class!
+Warning: com.android.internal.widget.ActionBarContainer is a phantom class!
+Warning: com.android.internal.widget.ActionBarView$HomeView is a phantom class!
+Warning: com.android.internal.widget.ResolverDrawerLayout is a phantom class!
+Warning: android.inputmethodservice.ExtractEditLayout is a phantom class!
+Warning: android.widget.SearchView$SearchAutoComplete is a phantom class!
+Warning: android.widget.DateTimeView is a phantom class!
+Warning: android.widget.SimpleMonthView is a phantom class!
+Warning: android.inputmethodservice.ExtractButton is a phantom class!
+Warning: android.widget.YearPickerView is a phantom class!
+Warning: com.android.internal.widget.DialogViewAnimator is a phantom class!
+Warning: android.preference.PreferenceFrameLayout is a phantom class!
+Warning: android.widget.RadialTimePickerView is a phantom class!
+Warning: com.android.internal.policy.impl.RecentApplicationsBackground is a phantom class!
+Warning: com.android.internal.R$id is a phantom class!
+Warning: java.lang.invoke.LambdaMetafactory is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+[Stat] #Classes: 1200, #AppClasses: 95
+[HIER] All classes: 1200 [App: 95, Lib : 1067, Phantom: 38]
+[HIER] Activities: 6, lib activities: 2
+[HIER] App views: 4, Lib views: 53
+[HIER] App Dialogs: 0, Lib Dialogs: 3
+Warning: android.view.DateTimeView is a phantom class!
+[GUIAnalysis] Start
+[XML] Layout Ids: 190, Menu Ids: 2, Widget Ids: 381, String Ids: 4
+[XML] MainActivity: com.android.root.main
+[WARNING] Missing layout id for adapter at virtualinvoke $r6.<android.widget.GridView: void setAdapter(android.widget.ListAdapter)>($r2) in <com.apk.com.lovePositions.AllActivity: void onCreate(android.os.Bundle)>
+[GUIAnalysis] End: 0.30851575200000003 sec
+[WTGDemoClient] Start
+[WTGBuilder]: stage 1 finishes
+..
+[WTGBuilder]: stage 2 finishes
+.....
+[WTGBuilder]: stage 3 finishes
+.....
+[WTGBuilder]: stage 4 finishes
+.....
+[WTGBuilder]: stage 5 finishes
+....
+[WTGBuilder]: stage 6 finishes
+[WTG]: wtg dump to file: /Users/xushengxiao/Documents/workspace/AndroidBench/wtg.dot
+[DEMO]: Application: DroidDream.apk
+[DEMO]: Launcher Node: LAUNCHER_NODE[]4016
+[DEMO]: Current Node: ACT[com.apk.com.lovePositions.AllActivity]581
+[DEMO]: View: ACT[com.apk.com.lovePositions.AllActivity]581 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3804]3805 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,581]3804 handler: []
+[DEMO]: View: INFL[android.widget.GridView,WID[2131034113|all_gird]356,3804]3806 handler: [HandlerBean [event=item_click, handlers=[<com.apk.com.lovePositions.AllActivity$ItemClickListener: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>]]]
+[DEMO]: Current Node: ACT[com.apk.com.lovePositions.ViewActivity]599
+[DEMO]: View: ACT[com.apk.com.lovePositions.ViewActivity]599 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034125|des]364,3837]3839 handler: [HandlerBean [event=click, handlers=[<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.TextView,WID[2131034124|title]366,3838]3842 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034128|next]386,3840]3844 handler: [HandlerBean [event=click, handlers=[<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,*,599]3837 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034127|pre]368,3840]3843 handler: [HandlerBean [event=click, handlers=[<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>, <com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3837]3840 handler: []
+[DEMO]: View: INFL[android.widget.ImageView,WID[2131034129|iv]384,3837]3841 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3837]3838 handler: []
+[DEMO]: Current Node: LAUNCHER_NODE[]4016
+[DEMO]: Current Node: ACT[com.mobclick.android.UmengFeedback]578
+[DEMO]: View: ACT[com.mobclick.android.UmengFeedback]578 handler: []
+[DEMO]: Current Node: ACT[com.android.root.main]596
+[DEMO]: View: ACT[com.android.root.main]596 handler: []
+[DEMO]: Current Node: DIALOG[android.app.AlertDialog]3763, alloc: <com.mobclick.android.MobclickAgent: android.app.AlertDialog createUpdateDialogBox(android.content.Context,org.json.JSONObject)>
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908887|title_template]447,3820]3824 handler: []
+[DEMO]: View: INFL[android.widget.ImageView,WID[16908889|titleDivider]452,3820]3825 handler: []
+[DEMO]: View: INFL[android.widget.ImageView,WID[16908294|icon]357,3824]3829 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908892|rightSpacer]455,3828]3836 handler: []
+[DEMO]: View: INFL[android.widget.FrameLayout,WID[16908895|customPanel]454,3819]3822 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908313|button1]393,3828]3833 handler: [HandlerBean [event=click, handlers=[<FakeName_4: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908886|topPanel]446,3819]3820 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908891|leftSpacer]450,3828]3832 handler: []
+[DEMO]: View: DIALOG[android.app.AlertDialog]3763, alloc: <com.mobclick.android.MobclickAgent: android.app.AlertDialog createUpdateDialogBox(android.content.Context,org.json.JSONObject)> handler: []
+[DEMO]: View: INFL[android.widget.FrameLayout,WID[16908331|custom]408,3822]3827 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908314|button2]390,3828]3835 handler: [HandlerBean [event=click, handlers=[<FakeName_8: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.ScrollView,WID[16908894|scrollView]453,3821]3826 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908315|button3]391,3828]3834 handler: []
+[DEMO]: View: INFL[com.android.internal.widget.DialogTitle,WID[16908888|alertTitle]451,3824]3830 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908893|contentPanel]456,3819]3821 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3823]3828 handler: []
+[DEMO]: View: INFL[android.widget.TextView,WID[16908299|message]367,3826]3831 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3763]3819 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908890|buttonPanel]449,3819]3823 handler: []
+[DEMO]: Current Node: DIALOG[android.app.AlertDialog]3762, alloc: <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3762]3845 handler: []
+[DEMO]: View: INFL[android.widget.TextView,WID[16908299|message]367,3852]3857 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908891|leftSpacer]450,3854]3858 handler: []
+[DEMO]: View: INFL[android.widget.ImageView,WID[16908889|titleDivider]452,3846]3851 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908314|button2]390,3854]3861 handler: []
+[DEMO]: View: DIALOG[android.app.AlertDialog]3762, alloc: <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)> handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908893|contentPanel]456,3845]3847 handler: []
+[DEMO]: View: INFL[android.widget.FrameLayout,WID[16908895|customPanel]454,3845]3848 handler: []
+[DEMO]: View: INFL[android.widget.FrameLayout,WID[16908331|custom]408,3848]3853 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908887|title_template]447,3846]3850 handler: []
+[DEMO]: View: INFL[android.widget.ScrollView,WID[16908894|scrollView]453,3847]3852 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908886|topPanel]446,3845]3846 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908890|buttonPanel]449,3845]3849 handler: []
+[DEMO]: View: INFL[com.android.internal.widget.DialogTitle,WID[16908888|alertTitle]451,3850]3856 handler: []
+[DEMO]: View: INFL[android.widget.ImageView,WID[16908294|icon]357,3850]3855 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908315|button3]391,3854]3860 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,WID[16908892|rightSpacer]455,3854]3862 handler: []
+[DEMO]: View: INFL[android.widget.Button,WID[16908313|button1]393,3854]3859 handler: [HandlerBean [event=click, handlers=[<FakeName_12: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3849]3854 handler: []
+[DEMO]: Current Node: ACT[com.apk.com.lovePositions.MainActivity]586
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3807]3808 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034121|random]372,3808]3810 handler: [HandlerBean [event=touch, handlers=[<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,*,586]3807 handler: []
+[DEMO]: View: ACT[com.apk.com.lovePositions.MainActivity]586 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034120|all]374,3808]3809 handler: [HandlerBean [event=touch, handlers=[<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>]]]
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034122|about]378,3808]3811 handler: [HandlerBean [event=touch, handlers=[<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>, <com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>]]]
+[DEMO]: Current Node: ACT[com.apk.com.lovePositions.ContentActivity]591
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3812]3813 handler: []
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3813]3814 handler: []
+[DEMO]: View: INFL[android.widget.ImageButton,WID[2131034115|back]360,3813]3815 handler: [HandlerBean [event=click, handlers=[<com.apk.com.lovePositions.ContentActivity$1: void onClick(android.view.View)>]]]
+[DEMO]: View: INFL[android.widget.LinearLayout,*,3813]3816 handler: []
+[DEMO]: View: INFL[android.widget.ScrollView,*,591]3812 handler: []
+[DEMO]: View: INFL[android.widget.TextView,WID[2131034114|content_title]362,3814]3817 handler: []
+[DEMO]: View: ACT[com.apk.com.lovePositions.ContentActivity]591 handler: []
+[DEMO]: View: INFL[android.widget.TextView,WID[2131034117|content]348,3816]3818 handler: []
+[WTGDemoClient] End: 5.4048463710000005 sec
+Soot stopped on Wed Apr 12 21:58:37 EDT 2017
+[1;31m[DEBUG] Debug file at `/var/folders/z9/19hqmm8n345f82nfy4kslv880000gn/T/null-DEBUG-718603903608506692.txt'.[0m
+Extract APK at: /var/folders/z9/19hqmm8n345f82nfy4kslv880000gn/T/tmptjYIDi
+['java', '-Xmx12G', '-classpath', ':/Users/xushengxiao/Documents/workspace/SootAndroid/bin:/Users/xushengxiao/Documents/workspace/SootAndroid/lib/guava-14.0.1.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/lib/junit-4.12.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/lib/sootclasses.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/lib/velocity-1.7-dep.jar', 'presto.android.Main', '-project', 'DroidDream.apk', '-android', '/Users/xushengxiao/Android/platforms/android-23/android.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-annotations.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v4.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-appcompat.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-cardview.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-gridlayout.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-mediarouter.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-palette.jar:/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-preference.jar::/Users/xushengxiao/Documents/workspace/SootAndroid/deps/android-support-v7-recyclerview.jar:/Users/xushengxiao/Android/platforms/android-23/optional/org.apache.http.legacy.jar', '-sdkDir', '/Users/xushengxiao/Android', '-classFiles', 'DroidDream.apk', '-resourcePath', '/var/folders/z9/19hqmm8n345f82nfy4kslv880000gn/T/tmptjYIDi/res', '-manifestFile', '/var/folders/z9/19hqmm8n345f82nfy4kslv880000gn/T/tmptjYIDi/AndroidManifest.xml', '-apiLevel', 'android-23', '-benchmarkName', 'DroidDream.apk', '-guiAnalysis', '-listenerSpecFile', '/Users/xushengxiao/Documents/workspace/SootAndroid/listeners.xml', '-wtgSpecFile', '/Users/xushengxiao/Documents/workspace/SootAndroid/wtg.xml', '-client', 'WTGDemoClient']
+Extracted APK resources removed!

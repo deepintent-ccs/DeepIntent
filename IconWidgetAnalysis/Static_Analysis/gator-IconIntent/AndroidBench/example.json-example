@@ -1,0 +1,20 @@
+{
+	"BASE_DIR"		: "",
+	"BASE_PARAM"	: "",
+	"BASE_CLIENT"	: "",
+	"BASE_CLIENT_PARAM"	: "",
+
+	"APP_NAME"	: {
+		"relative-path"	: "",
+		"abs-path"	: "",
+		"api-level"	: "",
+		"zip-file"	: "",
+		"abs-zip-file"	:	"",
+		"extra-lib"	: "",
+		"append-param" : "",
+		"append-client-param"	: "",
+		"override-client"	: "",
+		"override-param" : "",
+		"override-client-param"	: ""
+	}
+}
