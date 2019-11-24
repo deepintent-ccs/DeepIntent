@@ -1,0 +1,511 @@
+[
+	{
+		"name": "LAUNCHER_NODE[]4131",
+		"views": []
+	},
+	{
+		"name": "ACT[com.android.root.main]700",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.android.root.main]700"
+			}
+		]
+	},
+	{
+		"name": "ACT[com.apk.com.lovePositions.ContentActivity]685[LID[2130903041|layout_content]8]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.apk.com.lovePositions.ContentActivity]685"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.TextView,WID[2131034117|content]368,3941]3943"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3937]3938"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ScrollView,*,685]3937"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.TextView,WID[2131034114|content_title]382,3939]3942"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3938]3941"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3938]3939"
+			},
+			{
+				"images": [
+					"DrawableID[2130837600|drawable_up_pressed]679"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.ContentActivity$1: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034115|back]380,3938]3940"
+			}
+		]
+	},
+	{
+		"name": "ACT[com.apk.com.lovePositions.ViewActivity]680[LID[2130903044|layout_view]20]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,680]3944"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3944]3947"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.apk.com.lovePositions.ViewActivity]680"
+			},
+			{
+				"images": [
+					"DrawableID[2130837512|drawable_btn_pre]593",
+					"DrawableID[2130837510|drawable_btn_next_pressed]587",
+					"DrawableID[2130837521|drawable_down_pressed]602",
+					"DrawableID[2130837513|drawable_btn_pre_pressed]594",
+					"DrawableID[2130837509|drawable_btn_next]590"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034127|pre]388,3947]3950"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3944]3945"
+			},
+			{
+				"images": [
+					"DrawableID[2130837512|drawable_btn_pre]593",
+					"DrawableID[2130837510|drawable_btn_next_pressed]587",
+					"DrawableID[2130837521|drawable_down_pressed]602",
+					"DrawableID[2130837513|drawable_btn_pre_pressed]594",
+					"DrawableID[2130837509|drawable_btn_next]590"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034128|next]406,3947]3951"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.TextView,WID[2131034124|title]386,3945]3949"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ImageView,WID[2131034129|iv]404,3944]3948"
+			},
+			{
+				"images": [
+					"DrawableID[2130837512|drawable_btn_pre]593",
+					"DrawableID[2130837510|drawable_btn_next_pressed]587",
+					"DrawableID[2130837521|drawable_down_pressed]602",
+					"DrawableID[2130837513|drawable_btn_pre_pressed]594",
+					"DrawableID[2130837509|drawable_btn_next]590"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.ViewActivity$3: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$2: void onClick(android.view.View)>",
+							"<com.apk.com.lovePositions.ViewActivity$1: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034125|des]384,3944]3946"
+			}
+		]
+	},
+	{
+		"name": "DIALOG[android.app.AlertDialog]3878, alloc: <com.mobclick.android.MobclickAgent: android.app.AlertDialog createUpdateDialogBox(android.content.Context,org.json.JSONObject)>[LID[17367076|alert_dialog]81]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908890|buttonPanel]454,3919]3923"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ScrollView,WID[16908894|scrollView]458,3921]3926"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908887|title_template]452,3920]3924"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.FrameLayout,WID[16908895|customPanel]459,3919]3922"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908891|leftSpacer]455,3928]3932"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908892|rightSpacer]460,3928]3936"
+			},
+			{
+				"images": [],
+				"handlers": [
+					{
+						"handlers": [
+							"<FakeName_8: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.Button,WID[16908314|button2]410,3928]3935"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3878]3919"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908886|topPanel]451,3919]3920"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3923]3928"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ImageView,WID[16908889|titleDivider]457,3920]3925"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908893|contentPanel]461,3919]3921"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.TextView,WID[16908299|message]387,3926]3931"
+			},
+			{
+				"images": [],
+				"handlers": [
+					{
+						"handlers": [
+							"<FakeName_4: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.Button,WID[16908313|button1]413,3928]3933"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "DIALOG[android.app.AlertDialog]3878, alloc: <com.mobclick.android.MobclickAgent: android.app.AlertDialog createUpdateDialogBox(android.content.Context,org.json.JSONObject)>"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ImageView,WID[16908294|icon]377,3924]3929"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.Button,WID[16908315|button3]411,3928]3934"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[com.android.internal.widget.DialogTitle,WID[16908888|alertTitle]456,3924]3930"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.FrameLayout,WID[16908331|custom]428,3922]3927"
+			}
+		]
+	},
+	{
+		"name": "ACT[com.apk.com.lovePositions.MainActivity]690[LID[2130903043|layout_main]2]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,690]3952"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3952]3953"
+			},
+			{
+				"images": [
+					"DrawableID[2130837505|drawable_about_pressed]586",
+					"DrawableID[2130837561|drawable_random]642",
+					"DrawableID[2130837507|drawable_all_pressed]584",
+					"DrawableID[2130837504|drawable_about]585",
+					"DrawableID[2130837506|drawable_all]583",
+					"DrawableID[2130837562|drawable_random_pressed]639"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>"
+						],
+						"event": "touch"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034120|all]394,3953]3954"
+			},
+			{
+				"images": [
+					"DrawableID[2130837505|drawable_about_pressed]586",
+					"DrawableID[2130837561|drawable_random]642",
+					"DrawableID[2130837507|drawable_all_pressed]584",
+					"DrawableID[2130837504|drawable_about]585",
+					"DrawableID[2130837506|drawable_all]583",
+					"DrawableID[2130837562|drawable_random_pressed]639"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>"
+						],
+						"event": "touch"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034122|about]398,3953]3956"
+			},
+			{
+				"images": [
+					"DrawableID[2130837505|drawable_about_pressed]586",
+					"DrawableID[2130837561|drawable_random]642",
+					"DrawableID[2130837507|drawable_all_pressed]584",
+					"DrawableID[2130837504|drawable_about]585",
+					"DrawableID[2130837506|drawable_all]583",
+					"DrawableID[2130837562|drawable_random_pressed]639"
+				],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.MainActivity$3: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>",
+							"<com.apk.com.lovePositions.MainActivity$1: boolean onTouch(android.view.View,android.view.MotionEvent)>"
+						],
+						"event": "touch"
+					}
+				],
+				"name": "INFL[android.widget.ImageButton,WID[2131034121|random]392,3953]3955"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.apk.com.lovePositions.MainActivity]690"
+			}
+		]
+	},
+	{
+		"name": "ACT[com.apk.com.lovePositions.AllActivity]695[LID[2130903040|layout_all]11]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3957]3958"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.apk.com.lovePositions.AllActivity]695"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,695]3957"
+			},
+			{
+				"images": [],
+				"handlers": [
+					{
+						"handlers": [
+							"<com.apk.com.lovePositions.AllActivity$ItemClickListener: void onItemClick(android.widget.AdapterView,android.view.View,int,long)>"
+						],
+						"event": "item_click"
+					}
+				],
+				"name": "INFL[android.widget.GridView,WID[2131034113|all_gird]376,3957]3959"
+			}
+		]
+	},
+	{
+		"name": "DIALOG[android.app.AlertDialog]3877, alloc: <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>[LID[17367076|alert_dialog]81]",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ImageView,WID[16908889|titleDivider]457,3961]3966"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ScrollView,WID[16908894|scrollView]458,3962]3967"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3877]3960"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.FrameLayout,WID[16908895|customPanel]459,3960]3963"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[com.android.internal.widget.DialogTitle,WID[16908888|alertTitle]456,3965]3971"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908891|leftSpacer]455,3969]3973"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908892|rightSpacer]460,3969]3977"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.Button,WID[16908315|button3]411,3969]3975"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.Button,WID[16908314|button2]410,3969]3976"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.FrameLayout,WID[16908331|custom]428,3963]3968"
+			},
+			{
+				"images": [],
+				"handlers": [
+					{
+						"handlers": [
+							"<FakeName_12: void onClick(android.view.View)>"
+						],
+						"event": "click"
+					}
+				],
+				"name": "INFL[android.widget.Button,WID[16908313|button1]413,3969]3974"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908890|buttonPanel]454,3960]3964"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908887|title_template]452,3961]3965"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.ImageView,WID[16908294|icon]377,3965]3970"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "DIALOG[android.app.AlertDialog]3877, alloc: <com.apk.com.lovePositions.MainActivity$2: boolean onTouch(android.view.View,android.view.MotionEvent)>"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908886|topPanel]451,3960]3961"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.TextView,WID[16908299|message]387,3967]3972"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,WID[16908893|contentPanel]461,3960]3962"
+			},
+			{
+				"images": [],
+				"handlers": [],
+				"name": "INFL[android.widget.LinearLayout,*,3964]3969"
+			}
+		]
+	},
+	{
+		"name": "ACT[com.mobclick.android.UmengFeedback]703",
+		"views": [
+			{
+				"images": [],
+				"handlers": [],
+				"name": "ACT[com.mobclick.android.UmengFeedback]703"
+			}
+		]
+	}
+]

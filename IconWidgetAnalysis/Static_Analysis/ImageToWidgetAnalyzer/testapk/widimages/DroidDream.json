@@ -1,0 +1,169 @@
+[
+	{
+		"name": "view.xml",
+		"tags": [
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/image_bg"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/bar_bg"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/down"
+					}
+				],
+				"idName": "id\/des",
+				"name": "ImageButton",
+				"id": 2131034125
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/btn_pre"
+					}
+				],
+				"idName": "id\/pre",
+				"name": "ImageButton",
+				"id": 2131034127
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/btn_next"
+					}
+				],
+				"idName": "id\/next",
+				"name": "ImageButton",
+				"id": 2131034128
+			}
+		]
+	},
+	{
+		"name": "main.xml",
+		"tags": [
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/image_bg_start"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/all"
+					}
+				],
+				"idName": "id\/all",
+				"name": "ImageButton",
+				"id": 2131034120
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/random"
+					}
+				],
+				"idName": "id\/random",
+				"name": "ImageButton",
+				"id": 2131034121
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/about"
+					}
+				],
+				"idName": "id\/about",
+				"name": "ImageButton",
+				"id": 2131034122
+			}
+		]
+	},
+	{
+		"name": "all.xml",
+		"tags": [
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/image_bg"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			}
+		]
+	},
+	{
+		"name": "content.xml",
+		"tags": [
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/image_bg"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "background",
+						"value": "drawable\/bar_bg"
+					}
+				],
+				"idName": null,
+				"name": "LinearLayout",
+				"id": 0
+			},
+			{
+				"imgs": [
+					{
+						"attribute": "src",
+						"value": "drawable\/up"
+					}
+				],
+				"idName": "id\/back",
+				"name": "ImageButton",
+				"id": 2131034115
+			}
+		]
+	},
+	{
+		"name": "item.xml",
+		"tags": []
+	}
+]
