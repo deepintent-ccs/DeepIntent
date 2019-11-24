@@ -7,5 +7,6 @@ The static analysis also takes some configuration files as input. The files are 
 At last, as a part of the analysis, we also output the extended call graph of each app. The paths are defined at line 501, 503 and 632.
 # How to run the code
 1. Make a jar file after change every path in /Static_Analysis/APKCallGraph/src/APKCallGraph.java
-2. Run run.sh, the mappings are store in ./permission_output/
+2. Follow the comments in runImg2widgets.sh, change the dirs correspondingly.
+3. Use commend sh runImg2widgets.sh
 
