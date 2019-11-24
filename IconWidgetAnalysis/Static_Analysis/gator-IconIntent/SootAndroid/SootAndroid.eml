@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/bin/test"/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="sootclasses.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/soot-01092014.zip!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/sootclasses.jar!/"/>
+	</lib>
+	<lib name="guava-14.0.1.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/guava-14.0.1-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/guava-14.0.1-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/guava-14.0.1.jar!/"/>
+	</lib>
+	<lib name="android-17-stubs.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/deps/android-17-stubs.jar!/"/>
+	</lib>
+	<lib name="velocity-1.7-dep.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/velocity-1.7-dep.jar!/"/>
+	</lib>
+	<lib name="junit-4.12.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/"/>
+	</lib>
+</component>

@@ -1,0 +1,357 @@
+<!--
+  listeners.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<!--
+  Note that it is possible that listener registration method is called inside
+  the framework code, and we have to provide this knowledge somewhere else. For
+  example, the Activity class has a registerForContextMenu() method, which
+  calls setOnCreateContextMenuListener().
+-->
+<ListenerSpecification>
+  <gui type="android.view.View">
+    <event name="click">
+      <registration
+        subsig="void setOnClickListener(android.view.View$OnClickListener)"
+        position="0">
+
+        <handler
+          subsig="void onClick(android.view.View)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="implicit_create_context_menu">
+      <registration
+        subsig="void setOnCreateContextMenuListener(android.view.View$OnCreateContextMenuListener)"
+        position="0">
+        <handler
+          subsig="void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)"
+          position="1"
+          />
+      </registration>
+    </event>
+    <event name="drag">
+      <registration
+        subsig="void setOnDragListener(android.view.View$OnDragListener)"
+        position="0">
+        <handler
+          subsig="boolean onDrag(android.view.View,android.view.DragEvent)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="focus_change">
+      <registration
+        subsig="void setOnFocusChangeListener(android.view.View$OnFocusChangeListener)"
+        position="0">
+        <handler
+          subsig="void onFocusChange(android.view.View,boolean)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="press_key">
+      <registration
+        subsig="void setOnKeyListener(android.view.View$OnKeyListener)"
+        position="0">
+        <handler
+          subsig="boolean onKey(android.view.View,int,android.view.KeyEvent)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="long_click">
+      <registration
+        subsig="void setOnLongClickListener(android.view.View$OnLongClickListener)"
+        position="0">
+        <handler
+          subsig="boolean onLongClick(android.view.View)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="touch">
+      <registration
+        subsig="void setOnTouchListener(android.view.View$OnTouchListener)"
+        position="0">
+        <handler
+          subsig="boolean onTouch(android.view.View,android.view.MotionEvent)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="implicit_system_ui_change">
+      <registration
+        subsig="void setOnSystemUiVisibilityChangeListener(android.view.View$OnSystemUiVisibilityChangeListener)"
+        position="0">
+        <handler
+          subsig="void onSystemUiVisibilityChange(int)"
+          position="-1"
+          />
+      </registration>
+    </event>
+  </gui>
+
+  <gui type="android.widget.AdapterView">
+    <event name="item_click">
+      <registration
+        subsig="void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)"
+        position="0">
+        <handler
+          subsig="void onItemClick(android.widget.AdapterView,android.view.View,int,long)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="item_long_click">
+      <registration
+        subsig="void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener)"
+        position="0">
+        <handler
+          subsig="boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="item_selected">
+      <registration
+        subsig="void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)"
+        position="0">
+        <handler
+          subsig="void onItemSelected(android.widget.AdapterView,android.view.View,int,long)"
+          position="0"
+          />
+        <handler
+          subsig="void onNothingSelected(android.widget.AdapterView)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.view.MenuItem">
+    <event name="click">
+      <registration
+        subsig="android.view.MenuItem setOnMenuItemClickListener(android.view.MenuItem$OnMenuItemClickListener)"
+        position="0">
+        <handler
+          subsig="boolean onMenuItemClick(android.view.MenuItem)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.TextView">
+    <event name="enter_text">
+      <registration
+        subsig="void addTextChangedListener(android.text.TextWatcher)"
+        position="0">
+        <handler
+          subsig="void afterTextChanged(android.text.Editable)"
+          position="-1"
+          />
+        <handler
+          subsig="void beforeTextChanged(java.lang.CharSequence,int,int,int)"
+          position="-1"
+          />
+        <handler
+          subsig="void onTextChanged(java.lang.CharSequence,int,int,int)"
+          position="-1"
+          />
+      </registration>
+    </event>
+    <event name="press_key">
+      <registration
+        subsig="void setKeyListener(android.text.method.KeyListener)"
+        position="0">
+        <handler
+          subsig="boolean onKeyDown(android.view.View,android.text.Editable,int,android.view.KeyEvent)"
+          position="0"
+          />
+        <handler
+          subsig="boolean onKeyOther(android.view.View,android.text.Editable,android.view.KeyEvent)"
+          position="0"
+          />
+        <handler
+          subsig="boolean onKeyUp(android.view.View,android.text.Editable,int,android.view.KeyEvent)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="editor_action">
+      <registration
+        subsig="void setOnEditorActionListener(android.widget.TextView$OnEditorActionListener)"
+        position="0">
+        <handler
+          subsig="boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.SeekBar">
+    <event name="drag">
+      <registration
+        subsig="void setOnSeekBarChangeListener(android.widget.SeekBar$OnSeekBarChangeListener)"
+        position="0">
+        <handler
+          subsig="void onProgressChanged(android.widget.SeekBar,int,boolean)"
+          position="0"
+          />
+        <handler
+          subsig="void onStartTrackingTouch(android.widget.SeekBar)"
+          position="0"
+          />
+        <handler
+          subsig="void onStopTrackingTouch(android.widget.SeekBar)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.RadioGroup">
+    <event name="select">
+      <registration
+        subsig="void setOnCheckedChangeListener(android.widget.RadioGroup$OnCheckedChangeListener)"
+        position="0">
+        <handler
+          subsig="void onCheckedChanged(android.widget.RadioGroup,int)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.AbsListView">
+    <event name="scroll">
+      <registration
+        subsig="void setOnScrollListener(android.widget.AbsListView$OnScrollListener)"
+        position="0">
+        <handler
+          subsig="void onScroll(android.widget.AbsListView,int,int,int)"
+          position="0"
+          />
+        <handler
+          subsig="void onScrollStateChanged(android.widget.AbsListView,int)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.CompoundButton">
+    <event name="select">
+      <registration
+        subsig="void setOnCheckedChangeListener(android.widget.CompoundButton$OnCheckedChangeListener)"
+        position="0">
+        <handler
+          subsig="void onCheckedChanged(android.widget.CompoundButton,boolean)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.view.ViewGroup">
+    <event name="implicit_hierarchy_change">
+      <registration
+        subsig="void setOnHierarchyChangeListener(android.view.ViewGroup$OnHierarchyChangeListener)"
+        position="0">
+        <handler
+          subsig="void onChildViewAdded(android.view.View,android.view.View)"
+          position="0"
+          />
+        <handler
+          subsig="void onChildViewRemoved(android.view.View,android.view.View)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.TimePicker">
+    <event name="select">
+      <registration
+        subsig="void setOnTimeChangedListener(android.widget.TimePicker$OnTimeChangedListener)"
+        position="0">
+        <handler
+          subsig="void onTimeChanged(android.widget.TimePicker,int,int)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.Chronometer">
+    <event name="implicit_time_tick">
+      <registration
+        subsig="void setOnChronometerTickListener(android.widget.Chronometer$OnChronometerTickListener)"
+        position="0">
+        <handler
+          subsig="void onChronometerTick(android.widget.Chronometer)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+  <gui type="android.widget.ExpandableListView">
+    <event name="item_click">
+      <registration
+        subsig="void setOnChildClickListener(android.widget.ExpandableListView$OnChildClickListener)"
+        position="0">
+        <handler
+          subsig="boolean onChildClick(android.widget.ExpandableListView,android.view.View,int,int,long)"
+          position="0"
+          />
+      </registration>
+      <registration
+        subsig="void setOnGroupClickListener(android.widget.ExpandableListView$OnGroupClickListener)"
+        position="0">
+        <handler
+          subsig="boolean onGroupClick(android.widget.ExpandableListView,android.view.View,int,long)"
+          position="0"
+          />
+      </registration>
+      <registration
+        subsig="void setOnGroupCollapseListener(android.widget.ExpandableListView$OnGroupCollapseListener)"
+        position="0">
+        <handler
+          subsig="void onGroupCollapse(int)"
+          position="-1"
+          />
+      </registration>
+      <registration
+        subsig="void setOnGroupExpandListener(android.widget.ExpandableListView$OnGroupExpandListener)"
+        position="0">
+        <handler
+          subsig="void onGroupExpand(int)"
+          position="-1"
+          />
+      </registration>
+    </event>
+  </gui>
+
+  <gui type="android.widget.ZoomControls">
+    <event name="zoom_in">
+      <registration
+        subsig="void setOnZoomInClickListener(android.view.View$OnClickListener)"
+        position="0">
+        <handler
+          subsig="void onClick(android.view.View)"
+          position="0"
+          />
+      </registration>
+    </event>
+    <event name="zoom_out">
+      <registration
+        subsig="void setOnZoomOutClickListener(android.view.View$OnClickListener)"
+        position="0">
+        <handler
+          subsig="void onClick(android.view.View)"
+          position="0"
+          />
+      </registration>
+    </event>
+  </gui>
+</ListenerSpecification>
+

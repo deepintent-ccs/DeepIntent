@@ -1,0 +1,733 @@
+<!--
+  ccfg.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+
+<IntentSpecification>
+	<!-- list of APIs start new activity, type is used to specify super class, 
+		pos means the position of intent as parameter starting from 1 -->
+	<!-- cxtPos and ignore are both optional -->
+	<role type="startActivity">
+		<class type="android.content.Context">
+			<invocation subsig="void startActivity(android.content.Intent)">
+				<arg intentPos="1" />
+			</invocation>
+			<invocation
+				subsig="void startActivity(android.content.Intent,android.os.Bundle)">
+				<arg intentPos="1" />
+			</invocation>
+		</class>
+		<class type="android.app.Activity">
+			<invocation subsig="void startActivityForResult(android.content.Intent,int)">
+				<arg intentPos="1" />
+			</invocation>
+			<invocation
+				subsig="void startActivityFromChild(android.app.Activity,android.content.Intent,int)">
+				<arg intentPos="2" />
+			</invocation>
+			<invocation subsig="void startActivityIfNeeded(android.content.Intent,int)">
+				<arg intentPos="1" />
+			</invocation>
+			<invocation
+				subsig="void startActivityForResult(android.content.Intent,int,android.os.Bundle)">
+				<arg intentPos="1" />
+			</invocation>
+			<invocation
+				subsig="void startActivityFromChild(android.app.Activity,android.content.Intent,int,android.os.Bundle)">
+				<arg intentPos="2" />
+			</invocation>
+			<invocation
+				subsig="void startActivityFromFragment(android.support.v4.app.Fragment,android.content.Intent,int)">
+				<arg intentPos="2" />
+			</invocation>
+			<invocation
+				subsig="void startActivityFromFragment(android.support.v4.app.Fragment,android.content.Intent,int,android.os.Bundle)">
+				<arg intentPos="2" />
+			</invocation>
+			<invocation
+				subsig="boolean startActivityIfNeeded(android.content.Intent,int,android.os.Bundle)">
+				<arg intentPos="1" />
+			</invocation>
+		</class>
+		<class type="org.npr.android.news.RootActivity">
+			<invocation
+				subsig="void startActivityWithoutAnimation(android.content.Intent)">
+				<arg intentPos="1" />
+			</invocation>
+		</class>
+		<class type="org.geometerplus.android.fbreader.OrientationUtil">
+			<invocation
+				subsig="void startActivity(android.app.Activity,android.content.Intent)">
+				<arg intentPos="2" cxtPos="1" />
+			</invocation>
+			<invocation
+				subsig="void startActivityForResult(android.app.Activity,android.content.Intent,int)">
+				<arg intentPos="2" cxtPos="1" />
+			</invocation>
+		</class>
+		<class type="com.google.zxing.client.android.result.ResultHandler">
+			<invocation subsig="void launchIntent(android.content.Intent)">
+				<arg intentPos="1" />
+			</invocation>
+		</class>
+	</role>
+
+	<!-- to find the field attribute, please read IntentAnalysisInfo.java -->
+	<!-- the pair (pos, field) is used to specify the content of parameter at 
+		position "pos" is "field", pos starts from 1 -->
+	<role type="setIntentContent">
+		<class type="android.content.Intent">
+			<invocation
+				subsig="void &lt;init&gt;(android.content.Context,java.lang.Class)">
+				<arg pos="2" field="TgtActivity" />
+			</invocation>
+			<invocation subsig="void &lt;init&gt;(java.lang.String)">
+				<arg pos="1" field="Action" />
+			</invocation>
+			<invocation subsig="void &lt;init&gt;(java.lang.String,android.net.Uri)">
+				<arg pos="1" field="Action" />
+				<arg pos="2" field="Uri" />
+			</invocation>
+			<invocation
+				subsig="void &lt;init&gt;(java.lang.String,android.net.Uri,android.content.Context,java.lang.Class)">
+				<arg pos="1" field="Action" />
+				<arg pos="2" field="Uri" />
+				<arg pos="4" field="TgtActivity" />
+			</invocation>
+			<invocation subsig="void &lt;init&gt;(android.content.Intent)">
+				<arg pos="1" field="All" />
+			</invocation>
+			<invocation subsig="int fillIn(android.content.Intent,int)">
+				<arg pos="1" field="All" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setClass(android.content.Context,java.lang.Class)">
+				<arg pos="2" field="TgtActivity" />
+			</invocation>
+			<invocation subsig="android.content.Intent setData(android.net.Uri)">
+				<arg pos="1" field="Uri" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setDataAndNormalize(android.net.Uri)">
+				<arg pos="1" field="Uri" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setDataAndType(android.net.Uri,java.lang.String)">
+				<arg pos="1" field="Uri" />
+				<arg pos="2" field="MimeType" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setDataAndTypeAndNormalize(android.net.Uri,java.lang.String)">
+				<arg pos="1" field="Uri" />
+				<arg pos="2" field="MimeType" />
+			</invocation>
+			<invocation subsig="android.content.Intent setAction(java.lang.String)">
+				<arg pos="1" field="Action" />
+			</invocation>
+			<invocation subsig="android.content.Intent addCategory(java.lang.String)">
+				<arg pos="1" field="Category" />
+			</invocation>
+			<invocation subsig="android.content.Intent setType(java.lang.String)">
+				<arg pos="1" field="MimeType" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setClassName(java.lang.String,java.lang.String)">
+				<arg pos="2" field="TgtActivity" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setClassName(android.content.Context,java.lang.String)">
+				<arg pos="2" field="TgtActivity" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setTypeAndNormalize(java.lang.String)">
+				<arg pos="1" field="MimeType" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent setComponent(android.content.ComponentName)">
+				<arg pos="1" field="TgtActivity" />
+			</invocation>
+		</class>
+	</role>
+	<role type="propagateIntent">
+		<class type="android.content.Intent">
+			<invocation subsig="java.lang.Object clone()">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent cloneFilter()">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)">
+				<arg srcPosition="1" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent addFlags(int)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent setFlags(int)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putCharSequenceArrayListExtra(java.lang.String,java.util.ArrayList)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putIntegerArrayListExtra(java.lang.String,java.util.ArrayList)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putParcelableArrayListExtra(java.lang.String,java.util.ArrayList)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putStringArrayListExtra(java.lang.String,java.util.ArrayList)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,short[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,java.lang.String[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,android.os.IBinder[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,java.lang.CharSequence[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,android.os.Parcelable[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,char[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,android.os.Parcelable)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,boolean)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,short)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,android.os.Bundle)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,byte)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,java.lang.String)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,int[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,double[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,float[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,long)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,java.io.Serializable)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,float)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,boolean[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,java.lang.CharSequence)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,long[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,byte[])">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,int)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtra(java.lang.String,char)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtra(java.lang.String,double)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent putExtras(android.os.Bundle)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent putExtras(android.content.Intent)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation subsig="android.content.Intent replaceExtras(android.os.Bundle)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+			<invocation
+				subsig="android.content.Intent replaceExtras(android.content.Intent)">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+		</class>
+		<class type="org.geometerplus.android.fbreader.network.Util">
+			<invocation
+				subsig="android.content.Intent intentByLink(android.content.Intent,org.geometerplus.fbreader.network.INetworkLink)">
+				<arg srcPosition="1" tgtPosition="-1" />
+			</invocation>
+		</class>
+	</role>
+	<role type="propagateValue">
+		<class type="java.lang.Class">
+			<invocation subsig="java.lang.String getName()">
+				<arg srcPosition="0" tgtPosition="-1" />
+			</invocation>
+		</class>
+	</role>
+	<role type="createIntent">
+		<class type="com.google.android.apps.mytracks.util.IntentUtils">
+			<invocation
+				subsig="android.content.Intent newIntent(android.content.Context,java.lang.Class)">
+				<arg pos="2" field="TgtActivity" />
+			</invocation>
+		</class>
+		<class type="org.sipdroid.sipua.ui.Receiver">
+			<invocation subsig="android.content.Intent createIntent(java.lang.Class)">
+				<arg pos="1" field="TgtActivity" />
+			</invocation>
+		</class>
+	</role>
+	<role type="getIntent">
+		<class type="android.app.Activity">
+			<invocation subsig="android.content.Intent getIntent()">
+				<arg pos="-1" />
+			</invocation>
+		</class>
+	</role>
+	<role type="menuItemSetIntent">
+		<class type="android.view.MenuItem">
+			<invocation subsig="android.view.MenuItem setIntent(android.content.Intent)">
+				<arg intentPos="1" itemPos="0" />
+			</invocation>
+		</class>
+	</role>
+	<role type="getClass">
+		<class type="java.lang.Object">
+			<invocation subsig="java.lang.Class getClass()">
+				<arg srcPos="0" />
+			</invocation>
+		</class>
+	</role>
+	<role type="getId">
+		<class type="android.view.MenuItem">
+			<invocation subsig="int getItemId()">
+				<arg srcPos="0" />
+			</invocation>
+		</class>
+		<class type="android.view.View">
+			<invocation subsig="int getId()">
+				<arg srcPos="0" />
+			</invocation>
+		</class>
+	</role>
+	<role type="ignoreMethod">
+		<class type="org.npr.android.news.RootActivity">
+			<invocation
+				subsig="void startActivityWithoutAnimation(android.content.Intent)" />
+		</class>
+		<class type="org.geometerplus.android.fbreader.OrientationUtil">
+			<invocation
+				subsig="void startActivity(android.app.Activity,android.content.Intent)" />
+			<invocation
+				subsig="void startActivityForResult(android.app.Activity,android.content.Intent,int)" />
+		</class>
+		<class type="com.google.android.apps.mytracks.util.IntentUtils">
+			<invocation
+				subsig="android.content.Intent newIntent(android.content.Context,java.lang.Class)" />
+		</class>
+		<class type="org.sipdroid.sipua.ui.Receiver">
+			<invocation subsig="android.content.Intent createIntent(java.lang.Class)" />
+		</class>
+		<class type="org.geometerplus.android.fbreader.network.Util">
+			<invocation
+				subsig="android.content.Intent intentByLink(android.content.Intent,org.geometerplus.fbreader.network.INetworkLink)" />
+		</class>
+		<!-- class type="org.geometerplus.android.util.PackageUtil">
+			<invocation subsig="void runInstallPluginDialog(android.app.Activity,java.util.Map,java.lang.Runnable)" />
+		</class>
+		<class type="org.geometerplus.android.util.UIUtil">
+			<invocation subsig="void wait(java.lang.String,java.lang.Runnable,android.content.Context)" />
+			<invocation subsig="void runWithMessage(android.app.Activity,java.lang.String,java.lang.Runnable,java.lang.Runnable,boolean)" />
+		</class-->
+	</role>
+	<role type="writeToContainer">
+		<class type="java.util.Map">
+			<invocation subsig="java.lang.Object put(java.lang.Object,java.lang.Object)">
+				<arg srcPos="2" />
+			</invocation>
+		</class>
+		<class type="java.util.List">
+			<invocation subsig="void add(int,java.lang.Object)">
+				<arg srcPos="2" />
+			</invocation>
+			<invocation subsig="boolean add(java.lang.Object)">
+				<arg srcPos="1" />
+			</invocation>
+			<invocation subsig="java.lang.Object set(int,java.lang.Object)">
+				<arg srcPos="2" />
+			</invocation>
+
+		</class>
+	</role>
+
+	<role type="readFromContainer">
+		<class type="java.util.Map">
+			<invocation subsig="java.lang.Object put(java.lang.Object,java.lang.Object)">
+				<arg tgtPos="-1" />
+			</invocation>
+			<invocation subsig="java.lang.Object remove(java.lang.Object)">
+				<arg tgtPos="-1" />
+			</invocation>
+			<invocation subsig="java.lang.Object get(java.lang.Object)">
+				<arg tgtPos="-1" />
+			</invocation>
+		</class>
+		<class type="java.util.List">
+			<invocation subsig="java.lang.Object get(int)">
+				<arg tgtPos="-1" />
+			</invocation>
+			<invocation subsig="java.lang.Object remove(int)">
+				<arg tgtPos="-1" />
+			</invocation>
+			<invocation subsig="java.lang.Object set(int,java.lang.Object)">
+				<arg tgtPos="-1" />
+			</invocation>
+		</class>
+	</role>
+
+	<role type="acquireResource">
+		<class type="com.google.android.maps.MyLocationOverlay">
+			<invocation subsig="boolean enableMyLocation()">
+				<arg pos="0" />
+			</invocation>
+			<invocation subsig="boolean enableCompass()">
+				<arg pos="0" />
+			</invocation>
+		</class>
+
+		<!--<class type="android.hardware.Camera">-->
+			<!--<invocation subsig="android.hardware.Camera open()">-->
+				<!--<arg pos="-1" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="android.hardware.Camera open(int)">-->
+				<!--<arg pos="-1" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void startPreview()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.media.AudioManager">-->
+			<!--<invocation-->
+				<!--subsig="int requestAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener,int,int)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.media.MediaPlayer">-->
+			<!--<invocation-->
+				<!--subsig="android.media.MediaPlayer create(android.content.Context,android.net.Uri,android.view.SurfaceHolder)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.hardware.SensorManager">-->
+			<!--<invocation-->
+				<!--subsig="boolean	registerListener(android.hardware.SensorListener,int,int)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="boolean	registerListener(android.hardware.SensorListener,int)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="boolean	registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="boolean	registerListener(android.hardware.SensorEventListener,android.hardware.Sensor,int,android.os.Handler)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.os.Vibrator">-->
+			<!--<invocation subsig="vibrate(long)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.net.wifi.WifiManager.WifiLock">-->
+			<!--<invocation subsig="void acquire()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.os.PowerManager.WakeLock">-->
+			<!--<invocation subsig="void acquire()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void acquire(long)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+		<!--<class type="android.media.MediaRecorder">-->
+			<!--<invocation subsig="void start()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void prepare()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+		<class type="android.location.LocationManager">
+			<!--<invocation-->
+				<!--subsig="void requestLocationUpdates(long,float,android.location.Criteria,android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<invocation
+				subsig="void requestLocationUpdates(long,float,android.location.Criteria,android.location.LocationListener,android.os.Looper)">
+				<arg pos="4" />
+			</invocation>
+			<invocation
+				subsig="void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)">
+				<arg pos="4" />
+			</invocation>
+			<invocation
+				subsig="void requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener,android.os.Looper)">
+				<arg pos="4" />
+			</invocation>
+			<!--<invocation-->
+				<!--subsig="void requestLocationUpdates(java.lang.String,long,float,android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		</class>
+
+		<class type="com.google.android.gms.location.LocationClient">
+			<!--<invocation-->
+				<!--subsig="void requestLocationUpdates(com.google.android.gms.location.LocationRequest,android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<invocation
+				subsig="void requestLocationUpdates(com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationListener)">
+				<arg pos="2" />
+			</invocation>
+			<invocation
+				subsig="void requestLocationUpdates(com.google.android.gms.location.LocationRequest,com.google.android.gms.location.LocationListener,android.os.Looper)">
+				<arg pos="2" />
+			</invocation>
+		</class>
+	</role>
+
+	<role type="releaseResource">
+		<!--<class type="android.net.wifi.WifiManager.WifiLock">-->
+			<!--<invocation subsig="void release()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.os.Vibrator">-->
+			<!--<invocation subsig="cancel()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.media.AudioManager">-->
+			<!--<invocation-->
+				<!--subsig="int abandonAudioFocus(android.media.AudioManager.OnAudioFocusChangeListener)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.media.MediaPlayer">-->
+			<!--<invocation subsig="void release()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.hardware.SensorManager">-->
+			<!--<invocation-->
+				<!--subsig="void unregisterListener(android.hardware.SensorListener)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="void unregisterListener(android.hardware.SensorListener,int)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="void unregisterListener(android.hardware.SensorEventListener,android.hardware.Sensor)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+			<!--<invocation-->
+				<!--subsig="void unregisterListener(android.hardware.SensorEventListener)">-->
+				<!--<arg pos="1" />-->
+			<!--</invocation>-->
+
+		<!--</class>-->
+
+		<class type="android.location.LocationManager">
+			<invocation subsig="void removeUpdates(android.location.LocationListener)">
+				<arg pos="1" />
+			</invocation>
+			<!--<invocation subsig="void removeUpdates(android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<invocation
+				subsig="void removeGpsStatusListener(android.location.GpsStatus.Listener)">
+				<arg pos="1" />
+			</invocation>
+			<invocation
+				subsig="void removeNmeaListener(android.location.GpsStatus.NmeaListener)">
+				<arg pos="1" />
+			</invocation>
+			<!--<invocation subsig="void removeProximityAlert(android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void removeTestProvider(java.lang.String)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		</class>
+
+		<!--<class type="android.hardware.Camera">-->
+			<!--<invocation subsig="void release()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void stopPreview()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<class type="com.google.android.gms.location.LocationClient">
+			<!--<invocation subsig="void removeLocationUpdates(android.app.PendingIntent)">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<invocation
+				subsig="void removeLocationUpdates(com.google.android.gms.location.LocationListener)">
+				<arg pos="1" />
+			</invocation>
+		</class>
+
+		<class type="com.google.android.maps.MyLocationOverlay">
+			<invocation subsig="void disableMyLocation()">
+				<arg pos="0" />
+			</invocation>
+			<invocation subsig="void disableCompass()">
+				<arg pos="0" />
+			</invocation>
+		</class>
+
+		<!--<class type="android.media.MediaRecorder">-->
+			<!--<invocation subsig="void stop()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+			<!--<invocation subsig="void release()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+		<!--</class>-->
+
+		<!--<class type="android.os.PowerManager.WakeLock">-->
+			<!--<invocation subsig="void release()">-->
+				<!--<arg pos="0" />-->
+			<!--</invocation>-->
+
+		<!--</class>-->
+	</role>
+
+
+	<role type="asyncOperation">
+		<class type="android.app.Activity">
+			<invocation subsig="void runOnUiThread(java.lang.Runnable)">
+				<arg pos="0" />
+			</invocation>
+		</class>
+		<class type="android.view.View">
+			<invocation subsig="boolean post(java.lang.Runnable)">
+				<arg pos="0" />
+			</invocation>
+			<invocation subsig="boolean postDelayed(java.lang.Runnable,long)">
+				<arg pos="0" />
+			</invocation>
+		</class>
+		<class type="android.os.Handler">
+			<invocation subsig="boolean post(java.lang.Runnable)">
+				<arg pos="0" />
+			</invocation>
+			<invocation subsig="boolean postDelayed(java.lang.Runnable,long)">
+				<arg pos="0" />
+			</invocation>
+			<invocation subsig="boolean postAtTime(java.lang.Runnable,long)">
+				<arg pos="0" />
+			</invocation>
+		</class>
+	</role>
+
+    <role type="serviceOperations">
+        <class type="android.content.Context">
+            <invocation subsig="android.content.ComponentName startService(android.content.Intent)">
+                <arg pos="0"/>
+            </invocation>
+            <invocation subsig="boolean stopService(android.content.Intent)">
+                <arg pos="0"/>
+            </invocation>
+            <invocation subsig="boolean bindService(android.content.Intent,android.content.ServiceConnection,int)">
+                <arg pos="0"/>
+            </invocation>
+            <invocation subsig="void unbindService(android.content.ServiceConnection)">
+                <arg pos="0"/>
+            </invocation>
+        </class>
+
+        <class type="android.app.Service">
+            <invocation subsig="void stopSelf()">
+                <arg pos="0" />
+            </invocation>
+            <invocation subsig="void stopSelf(int)">
+                <arg pos="0" />
+            </invocation>
+            <invocation subsig="boolean stopSelfResult(int)">
+                <arg pos="0" />
+            </invocation>
+        </class>
+    </role>
+	<!--<role type="specialAllocation">-->
+		<!--<class type="android.hardware.Camera">-->
+			<!--<invocation subsig="android.hardware.Camera open()">-->
+			<!--</invocation>-->
+			<!--<invocation subsig="android.hardware.Camera open(int)">-->
+			<!--</invocation>-->
+		<!--</class>-->
+	<!--</role>-->
+</IntentSpecification>
+

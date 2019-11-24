@@ -1,0 +1,3 @@
+home_event 4200
+power_event 4200
+switch_app_event 3000

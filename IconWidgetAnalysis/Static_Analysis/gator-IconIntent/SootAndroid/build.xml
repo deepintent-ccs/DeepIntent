@@ -1,0 +1,29 @@
+<!--
+  build.xml - part of the GATOR project
+
+  Copyright (c) 2014, 2015 The Ohio State University
+
+  This file is distributed under the terms described in LICENSE in the root
+  directory.
+-->
+<project name="SootAndroid" basedir="." default="compile">
+  <property name="src.dir"  value="src" />
+  <property name="bin.dir"  value="bin" />
+  <property name="lib.dir"  value="lib"/>
+
+  <path id="classpath">
+    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    <pathelement location="deps/android-17-stubs.jar" />
+  </path>
+  <target name="clean">
+    <delete dir="${bin.dir}" />
+  </target>
+  <target name="compile">
+    <mkdir dir="${bin.dir}" />
+    <javac includeantruntime="false" srcdir="${src.dir}" destdir="${bin.dir}" classpathref="classpath" debug="true">
+      <src path="${src.dir}" />
+      <include name="**/*.java" />
+    </javac>
+  </target>
+</project>
+
