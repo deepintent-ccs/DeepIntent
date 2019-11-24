@@ -7,7 +7,7 @@ Implementation of the paper *DeepIntent: Deep Icon-Behavior Learning for Detecti
 ## Requirements
 
 ## Repository Contents
-
+The program analysis is in DeepIntent/IconWidgetAnalysis/Static_Analysis/ directory. It contains icon-widget-association analysis (i.e. GATOR, IconIntent), icon-behavior-association analysis (i.e. ic3, APKCallGraph), and icon-permisssion mapping. 
 ## Usage
 
 ## Citing
