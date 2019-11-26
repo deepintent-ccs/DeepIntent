@@ -29,6 +29,9 @@ JAVA Version: 1.8.0_181
 ## Repository Contents
 The program analysis is in DeepIntent/IconWidgetAnalysis/Static_Analysis/ directory. It contains icon-widget-association analysis (i.e. GATOR, IconIntent), icon-behavior-association analysis (i.e. ic3, APKCallGraph), and icon-permisssion mapping. 
 ## Usage
+DeepIntent contains two three major components. The first step is to run static analysis on Android apps, obtain the association results of UI widgets and icons from .xml files, their handlers and API calls in the source code, and corresponding permission uses. Detailed instruction is shown in 
+
+
 
 ## Citing
 
