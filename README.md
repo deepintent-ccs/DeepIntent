@@ -1,5 +1,5 @@
 # DeepIntent
-<img src = "CWRU.png" width = 200/>
+<img src = "CWRU.png" width = 375/>
 Implementation of the paper *DeepIntent: Deep Icon-Behavior Learning for Detecting Intention-Behavior Discrepancy in Mobile Apps*.
 
 ## Introduction
