@@ -20,6 +20,9 @@ Based on these key insights, DeepIntent provides a novel learning approach, deep
 
 We collect a set of 9,891 benign apps and 16,262 malicious apps, from which we extract over 10,000 icon widgets that are mapped to sensitive permission uses. We use 80% of the icons from the benign apps as training data, and detect the intention-behavior discrepancies on the remaining icons from the benign apps and all the icons from malicious apps. For the test set, we manually label whether there is an intention-behavior discrepancy to form the ground truth. Finally, DeepIntent returns a ranked list based on the outlier scores for detecting intention-behavior discrepancies.
 ## Requirements
+Android SDK Version: 18
+PScout Version: jellybean.
+JAVA Version: 1.8.0_181
 
 ## Repository Contents
 The program analysis is in DeepIntent/IconWidgetAnalysis/Static_Analysis/ directory. It contains icon-widget-association analysis (i.e. GATOR, IconIntent), icon-behavior-association analysis (i.e. ic3, APKCallGraph), and icon-permisssion mapping. 
