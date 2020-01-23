@@ -1,7 +1,7 @@
 Data set
 ====================
 
-Some provided data is a little big, please download them from BaiduYun(link[https://pan.baidu.com/s/1wRs6TvpXv70l4TmKITw5gA], password: 7ffkpre-processed).
+Some provided data is a little big, please download them from BaiduYun(link[https://pan.baidu.com/s/1wRs6TvpXv70l4TmKITw5gA], password: 7ffk).
 
 + example: the small example APKs, including both benign and malicious apps, should be download from the above URL.
 + text_example: small example used to test textual extraction process.
