@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com.crashlytics.android.build_id">40cd7ae3-4535-44cc-90dd-3be03bc208db</string>
+    <string name="POP">Percentage of Precipitation</string>
+    <string name="accept">Accept</string>
+    <string name="action_settings">Settings</string>
+    <string name="add">Add</string>
+    <string name="add_location">Add Location</string>
+    <string name="add_new_city">Add New City</string>
+    <string name="add_new_theme">Add New Theme</string>
+    <string name="adding">Adding...</string>
+    <string name="app_name">Weather Kitty</string>
+    <string name="avg_humidity">Average Humidity</string>
+    <string name="avg_wind">Average Wind</string>
+    <string name="back">Back</string>
+    <string name="blank" />
+    <string name="blank_number">--</string>
+    <string name="c">C°</string>
+    <string name="city">Loading...</string>
+    <string name="city_limit">"We’re only allowing 6 cities right now to ensure that the application performs well on all Android devices (including small, mouse-sized ones).
+
+We’re aiming to increase this number in the next update!"</string>
+    <string name="city_limit_ok">OK</string>
+    <string name="city_limit_title">6 Location Limit (Temporary)</string>
+    <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
+    <string name="common_android_wear_update_text">"This app won't run unless you update the Android Wear app."</string>
+    <string name="common_android_wear_update_title">Update Android Wear</string>
+    <string name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string name="common_google_play_services_enable_text">"This app won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by %1$s</string>
+    <string name="common_google_play_services_install_button">Get Google Play services</string>
+    <string name="common_google_play_services_install_text_phone">"This app won't run without Google Play services, which are missing from your phone."</string>
+    <string name="common_google_play_services_install_text_tablet">"This app won't run without Google Play services, which are missing from your tablet."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_notification_needs_installation_title">An application requires installation of Google Play services.</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_sign_in_failed_text">Error signing in the specified account. Please choose a different account.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Sign in failed</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"This app won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="commono_google_play_services_api_unavailable_text">This app requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
+    <string name="crash_splash_contact">"If you have any other problems please email us at
+meow@weathercreative.com"</string>
+    <string name="crash_splash_help">"App not starting?
+Tap the red button"</string>
+    <string name="crash_splash_help_button">Fix It!</string>
+    <string name="crash_splash_ps">p.s Working on the widget!</string>
+    <string name="crash_splash_title">"Oops...
+Weather Kitty
+ Messed Up!"</string>
+    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
+    <string name="create_calendar_title">Create calendar event</string>
+    <string name="current_location">Current Location</string>
+    <string name="current_weather_instruction">Tap anywhere on this panel to reveal more weather data</string>
+    <string name="currently">Currently</string>
+    <string name="days_ago">days</string>
+    <string name="decline">Decline</string>
+    <string name="delete">Delete</string>
+    <string name="dew_point">Dew Point</string>
+    <string name="downlaod_fail_title">Download Failed</string>
+    <string name="download_completed">Theme Downloaded</string>
+    <string name="download_fail_body">Would you like to retry?</string>
+    <string name="download_fail_no">Later</string>
+    <string name="download_fail_yes">Yes</string>
+    <string name="downloading_theme">Downloading Theme</string>
+    <string name="drag_instruction">To change order drag here</string>
+    <string name="edit_locations">Edit Locations</string>
+    <string name="enable_gps">Enable GPS</string>
+    <string name="enable_gps_prompt">GPS is not enabled on your device. To receive the most accurate weather data enable GPS.</string>
+    <string name="environment">prd</string>
+    <string name="error_IAB_store">Google Play is playing around, please try again in a few minutes.</string>
+    <string name="error_IAB_store_title">Google Play Problem</string>
+    <string name="error_encryption">If anything weird is happening please contact support@weathercreative.com or reinstall the app.</string>
+    <string name="error_encryption_title">Major Error!</string>
+    <string name="error_general">If the app starts acting funny please restart it! If still funny please try re-installing.</string>
+    <string name="error_general_2">"Error %s 
+The app is experiencing technical difficulties. Please try restarting, if the problem persists you may have to reinstall."</string>
+    <string name="error_general_title">Ooops.. background error %s has occurred.</string>
+    <string name="error_network">We had trouble accessing the internet. Please check your connection and try again.</string>
+    <string name="error_network_title">Internet Problem</string>
+    <string name="error_reset_weather_data">A serious error occurred loading your cities so we had to reset them. Sorry.</string>
+    <string name="error_reset_weather_data_ok">Ok</string>
+    <string name="error_reset_weather_data_title">City Error</string>
+    <string name="error_search_result">City Not Found. Try again and be sure to use the English name, check your spelling and not to use accents or special characters. Look for Sao Paulo, not São Paulo &amp; Cologne, not Köln.</string>
+    <string name="error_search_result_title">Ooops...Problem</string>
+    <string name="error_theme_restore">We had trouble getting some of your purchases. Please contact us immediately at support@weathercreative.com and we will resolve this issue for you.</string>
+    <string name="error_theme_restore_title">Cannot get Theme</string>
+    <string name="error_weather_fetch">"We can't find the weather!
+1) Could be your internet connection, please check it!
+2) Or our weather service is coughing up a hairball, in that case try again in a 10 minutes!"</string>
+    <string name="error_weather_fetch_add_city">We were unable to add this location. Please try again in 20 mins.</string>
+    <string name="error_weather_fetch_add_city_title">Ooops...</string>
+    <string name="error_weather_fetch_city">The data for this location is temporarily unavailable. Please try again in a few minutes.</string>
+    <string name="error_weather_fetch_city_title">Ooops...Weather Problem</string>
+    <string name="error_weather_fetch_gps">We had trouble finding your GPS location. Please check your GPS settings or try again in a few minutes.</string>
+    <string name="error_weather_fetch_gps_location">GPS could not find a station near your coordinates. Please try to add a city manually.</string>
+    <string name="error_weather_fetch_gps_location_title">GPS Problem!</string>
+    <string name="error_weather_fetch_gps_title">GPS Problem!</string>
+    <string name="error_weather_fetch_title">Weather Data Problem</string>
+    <string name="f">F°</string>
+    <string name="feels_like">Feels Like:</string>
+    <string name="free_button">Get it for Free</string>
+    <string name="free_message">"THE FREE THEMES ARE NOT AVAILABLE YET.
+
+We want you to have free kittens and we are working on a feature that allows you to unlock free kittens!
+
+WHEN this feature is ready we will send a push notification.
+
+Please have patience as we build this purr-fect feature over the coming weeks."</string>
+    <string name="free_message_ok">OK</string>
+    <string name="free_message_title">COMING SOON</string>
+    <string name="free_restore_button">"I have already signed up
+Please restore all my free themes"</string>
+    <string name="heat_index">Heat Index</string>
+    <string name="hourly">Hourly</string>
+    <string name="hourly_weather_instruction">Tap on any day for its forecast</string>
+    <string name="hourly_weather_warning">Full 24 hour weather temporarily unavailable.</string>
+    <string name="hours_ago">hours</string>
+    <string name="humidity">Humidity</string>
+    <string name="i">i</string>
+    <string name="instructions_expand_button">"Tap paw to:
+-add cities
+-get more cats"</string>
+    <string name="instructions_swipe_cities">Swipe for more Cities</string>
+    <string name="instructions_swipe_data">Swipe up for Data</string>
+    <string name="invalid_theme">Invalid Theme!</string>
+    <string name="last_update_format" formatted="false">Last updated %s %s ago via</string>
+    <string name="loading_store">Loading Store...</string>
+    <string name="location">Location</string>
+    <string name="location_search_hint">Enter the City or Zip code</string>
+    <string name="minutes_ago">minutes</string>
+    <string name="moon_format_string" formatted="false">Moon: %s, %s%% illuminated.</string>
+    <string name="more_info">More</string>
+    <string name="more_theme_info_title">About %s</string>
+    <string name="more_themes_button">Get more kitty themes + remove ads!</string>
+    <string name="my_themes">My Kitty Themes</string>
+    <string name="no_results_found">"CITY NOT FOUND
+ Remember to use the English name, check your spelling, and not to use accents or special characters
+ For example, look for Sao Paulo, not São Paulo and Cologne, not Köln. 
+ Please contact meow@weathercreative.com if you can't find your city after following these steps."</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="notify_updates">Notify me when new kitties are added to the app.</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="precipitation_all_day">Precipitation All Day</string>
+    <string name="precipitation_next_hour">Next Hour Precip.</string>
+    <string name="pressure">Pressure</string>
+    <string name="purchase_button">Purchase for %s</string>
+    <string name="purchase_button_ads">Purchase &amp; Remove Ads for %s</string>
+    <string name="purchase_remove_message">Any purchase will remove ads</string>
+    <string name="radar">Radar</string>
+    <string name="radar_unavailable">Radar is not available for this location. We are hoping to have it available in our next update.</string>
+    <string name="rate_later">Remind Me Later</string>
+    <string name="rate_message">"If no tell me why at
+ meow@weathercreative.com!"</string>
+    <string name="rate_no">No :(</string>
+    <string name="rate_title">I CAN HAZ 5-STAR REVIEW?</string>
+    <string name="rate_yes">Rate Now</string>
+    <string name="remove">Remove</string>
+    <string name="searching">Searching</string>
+    <string name="seconds_ago">seconds</string>
+    <string name="settings">Settings</string>
+    <string name="settings_button_description">Settings</string>
+    <string name="share_body_text">Check out the weather kitty app at http://weatherkittyapp.com</string>
+    <string name="share_button_description">Share</string>
+    <string name="share_no_internet_warning">An network connection is needed to share. Please check your internet and try again.</string>
+    <string name="share_pop_title">Share This Kitty</string>
+    <string name="share_subject_title">Weather Kitty App</string>
+    <string name="shuffle_decline">No Thanks</string>
+    <string name="shuffle_download_themes">"The following themes need to be re-downloaded:
+
+%s
+Please tap on the theme icons to download them."</string>
+    <string name="shuffle_download_themes_title">Not Just Yet</string>
+    <string name="shuffle_get_themes">Get More Themes!</string>
+    <string name="shuffle_instruction">"You need more themes to use Shuffle Mode!
+
+Shuffle Mode combines all your themes into a super theme!
+
+Since you only have one theme, there is nothing to combine!!"</string>
+    <string name="shuffle_instruction_title">Not Enough Themes!</string>
+    <string name="shuffle_mode">Shuffle Themes</string>
+    <string name="shuffle_ok">OK</string>
+    <string name="snow_fall_all_day">Snow Fall All Day</string>
+    <string name="station">Station</string>
+    <string name="store_picture_message">Allow Ad to store image in Picture gallery?</string>
+    <string name="store_picture_title">Save image</string>
+    <string name="sun_and_moon">Sun And Moon</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="sunset">Sunset:</string>
+    <string name="temp_not_available">Forecast temporarily unavailable.</string>
+    <string name="ten_day_forecast">10 Day Forecast</string>
+    <string name="theme_download_error">We had trouble downloading this theme. Please try again later. Contact meow@weathercreative.com if the problem continues.</string>
+    <string name="theme_download_error_title">Download Error</string>
+    <string name="theme_error_message">There appears to be a problem with this theme. Please reinstall the app if this continues.</string>
+    <string name="theme_store">Download Kitty Themes</string>
+    <string name="theme_store_all_sold">"THANK YOU FOR BEING AMAZING! 
+You already have all the themes we've made…we'll surely release more soon so please check back with us!"</string>
+    <string name="theme_store_button_description">More Kittens</string>
+    <string name="theme_tile_button">PREVIEW</string>
+    <string name="themes_sales_header_free">FREE</string>
+    <string name="themes_sales_header_premium">Available for Purchase</string>
+    <string name="themes_sales_header_regular">Available for Purchase or for</string>
+    <string name="themes_sales_header_regular_bold">FREE</string>
+    <string name="today">Today</string>
+    <string name="tonight">Tonight</string>
+    <string name="units">Units</string>
+    <string name="user_type">prd</string>
+    <string name="uv_index">UV Index</string>
+    <string name="visibility">Visibility</string>
+    <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="watermark_text">Download for free at http://weatherkittyapp.com!</string>
+    <string name="wind">Wind</string>
+    <string name="wind_gusts">Wind Gusts</string>
+    <string name="windchill">Wind Chill</string>
+    <string name="zmw_rebuild_error">This was a one time thing - sorry - it was important for improving the app. Thanks! :)</string>
+    <string name="zmw_rebuild_error_title">We had to reset your cities :(</string>
+</resources>

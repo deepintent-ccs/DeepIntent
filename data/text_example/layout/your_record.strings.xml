@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Untangle!</string>
+    <string name="app_name">Untangle Space Out</string>
+    <string name="app_name_paid">Untangle Space Out PRO</string>
+    <string name="develop">Developed By</string>
+    <string name="copyright">© 2011</string>
+    <string name="company_name">Apostek</string>
+    <string name="company_url">www.apostek.com</string>
+    <string name="other_apps">Also by Apostek</string>
+    <string name="slotmachine_text">Slot Machine</string>
+    <string name="slotmachine_url">market://details?id=com.apostek.SlotMachine</string>
+    <string name="tictactoe_text">Tic Tac Toe</string>
+    <string name="tictactoe_url">market://details?id=com.apostek.app.tictactoe</string>
+    <string name="share_with_friends">SHARE YOUR ACHIEVEMENT WITH FRIENDS</string>
+    <string name="help1">"Choose 'ARCADE' to play infinite games in a random play mode.
+ 'CHALLENGE' mode allows levels based progressive mode of play.
+Solve all 5 games in a level to unlock the next one."</string>
+    <string name="help2">"Solve each puzzle by untangling the rays.
+Red ray indicates tangled state.
+Touch and drag an orb to move it to desired location.
+A selected orb is displayed with a white glow around it."</string>
+    <string name="help3">"Moves and Time are indicated on top left and right respectively.
+Try and beat your personal best by solving the puzzle in fewer moves taking lesser time.
+Bonus game is unlocked every 5 completed games."</string>
+    <string name="help4">Expandable Menu provides various in-game options including quitting the game, viewing the solution and turning the soundtrack on/off.</string>
+    <string name="help5">"View game levels and their status along with statistics for any selected game.
+Paid levels are indicated by a red lock.
+Click 'Purchase' button to buy these additional levels for challenge mode."</string>
+    <string name="help5_pro">"View game levels and their status along with statistics for any selected game.
+Paid levels are indicated by a red lock."</string>
+    <string name="help6">"Get access to game stats and online leader boards via the 'SCORES' option on Home Screen or in-game menu.
+Touch the 'CHANGE' button to filter the leader board criteria between different Modes, Durations and Zones."</string>
+    <string name="help_header1">MENU SCREEN</string>
+    <string name="help_header2">HOW TO PLAY</string>
+    <string name="help_header3">GAME SCREEN: INFO</string>
+    <string name="help_header4">GAME SCREEN: CONTROLS</string>
+    <string name="help_header5">CHALLENGE MODE: LEVELS</string>
+    <string name="help_header6">LEADER BOARD</string>
+    <string name="menu_start">Start</string>
+    <string name="menu_stop">Stop</string>
+    <string name="menu_pause">Pause</string>
+    <string name="menu_resume">Resume</string>
+    <string name="menu_easy">Easy</string>
+    <string name="menu_medium">Medium</string>
+    <string name="menu_hard">Hard</string>
+    <string name="mode_ready">"Lunar Lander
+Press Up To Play"</string>
+    <string name="mode_pause">"Paused
+Press Up To Resume"</string>
+    <string name="mode_lose">"Game Over
+Press Up To Play"</string>
+    <string name="mode_win_prefix">"Success!
+"</string>
+    <string name="mode_win_suffix">"in a row
+Press Up to Play"</string>
+    <string name="message_stopped">Stopped</string>
+    <string name="message_off_pad">Off Landing Pad</string>
+    <string name="message_too_fast">Too Fast</string>
+    <string name="message_bad_angle">Bad Angle</string>
+    <string name="lunar_layout_text_text" />
+    <string name="startapp_devid">987550905</string>
+    <string name="startapp_appid">525884208</string>
+</resources>

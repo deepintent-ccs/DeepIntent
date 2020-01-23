@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/bodyFrame" android:background="@drawable/your_record" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center|right|top" android:layout_gravity="center|right|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip">
+        <ImageView android:id="@id/lbl_yr_type" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:src="@drawable/lbl_arcade" android:layout_alignTop="@id/lbl_yr_type" android:layout_alignParentRight="true" />
+        <ImageButton android:id="@id/btn_arrow_left" android:background="@android:color/transparent" android:layout_width="30.0dip" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/btn_left" android:layout_toLeftOf="@id/lbl_yr_type" />
+        <ImageButton android:id="@id/btn_arrow_right" android:background="@android:color/transparent" android:layout_width="30.0dip" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/btn_right" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center|left|top" android:layout_gravity="center|left|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="55.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_player_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": ADAM" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center|left|top" android:layout_gravity="center|left|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="95.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_total_score" android:layout_width="210.0dip" android:layout_height="wrap_content" android:text="TOTAL SCORE" />
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_total_score_val" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": 0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center|left|top" android:layout_gravity="center|left|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="135.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_daily_score" android:layout_width="210.0dip" android:layout_height="wrap_content" android:text="DAILY SCORE" />
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_daily_score_val" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": 0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center|left|top" android:layout_gravity="center|left|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="175.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_weekly_score" android:layout_width="210.0dip" android:layout_height="wrap_content" android:text="WEEKLY SCORE" />
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_weekly_score_val" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": 0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center|left|top" android:layout_gravity="center|left|top" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="215.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_monthly_score" android:layout_width="210.0dip" android:layout_height="wrap_content" android:text="MONTHLY SCORE" />
+        <TextView android:textSize="17.0dip" android:textColor="#ffffffff" android:id="@id/tv_monthly_score_val" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": 0" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/buttonsLayout" android:background="@drawable/scores_black_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip">
+        <ImageButton android:id="@id/btn_done" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/done" android:layout_alignParentLeft="true" />
+        <ImageButton android:id="@id/btn_leaderboard" android:background="@android:color/transparent" android:paddingLeft="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:src="@drawable/btn_leaderboard" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/btn_share" android:background="@android:color/transparent" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/share_small" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="top" android:layout_gravity="top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120.0dip">
+        <include android:layout_gravity="center|left|top" android:id="@id/alert_dialog_username" layout="@layout/alert_dialog_username" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom|center|left" android:orientation="vertical" android:id="@id/layout_ad" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginLeft="0.0dip" />
+    <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/llTwitter" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/wvTwitter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</FrameLayout>

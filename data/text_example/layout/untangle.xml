@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/widget84" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/mainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/bodyLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:gravity="top" android:orientation="vertical" android:id="@id/img_alpha_sheet" android:background="@drawable/purple" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:gravity="top" android:layout_gravity="top" android:id="@id/progress_small0" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginLeft="110.0dip" android:layout_marginTop="190.0dip" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/tv_bonusround" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BONUS ROUND" />
+        <LinearLayout android:gravity="top" android:layout_gravity="top" android:orientation="vertical" android:id="@id/headerLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="top" android:layout_gravity="top" android:id="@id/headerRelativeLayoutOne" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <ImageView android:gravity="left" android:id="@id/img_moves_best" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/move_gf" />
+                <TextView android:gravity="left" android:id="@id/tv_moves_best" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="0" />
+                <TextView android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/tv_level" android:background="@drawable/level_base_gf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="5.0dip" android:text="LEVEL 1" android:layout_centerHorizontal="true" />
+                <ImageView android:gravity="left" android:id="@id/img_time_best" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/clock_gf" android:layout_alignParentRight="true" />
+                <TextView android:orientation="horizontal" android:id="@id/tv_time_best" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="22.0dip" android:text="00:00" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="top" android:layout_gravity="top" android:id="@id/headerRelativeLayoutTwo" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:gravity="left" android:id="@id/tv_moves" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="0" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/sublevelLinearLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_centerHorizontal="true">
+                    <ImageView android:orientation="horizontal" android:id="@id/img_sl1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sub_level_com" android:layout_centerHorizontal="true" />
+                    <ImageView android:orientation="horizontal" android:id="@id/img_sl2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sub_level_incom" android:layout_centerHorizontal="true" />
+                    <ImageView android:orientation="horizontal" android:id="@id/img_sl3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sub_level_incom" android:layout_centerHorizontal="true" />
+                    <ImageView android:orientation="horizontal" android:id="@id/img_sl4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sub_level_incom" android:layout_centerHorizontal="true" />
+                    <ImageView android:orientation="horizontal" android:id="@id/img_sl5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sub_level_incom" android:layout_centerHorizontal="true" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/timerLinearLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentRight="true">
+                    <TextView android:gravity="left" android:id="@id/tv_timer_bonus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="12" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView android:gravity="center|left|top" android:layout_gravity="center|left|top" android:id="@id/tv_bonus_points" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="50.0dip" android:text="12" />
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/exitLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="top" android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                <ImageButton android:id="@id/btn_exit" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/btn_exit" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/drawerLayout" android:background="@drawable/drawer_dn" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="top" android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                <ImageButton android:id="@id/btn_drawer" android:background="@android:color/transparent" android:layout_width="72.0dip" android:layout_height="30.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/drawer_up_btn" android:layout_alignParentLeft="true" />
+                <ImageButton android:id="@id/btn_restart" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_marginBottom="4.0dip" android:src="@drawable/restart_btn" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/drawerButtonsLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="bottom|center|left" android:layout_gravity="bottom|center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                    <ImageButton android:id="@id/btn_home" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/home_btn" />
+                    <ImageButton android:id="@id/btn_scores" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/score_btn" />
+                    <ImageButton android:id="@id/btn_settings" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/settings_btn" />
+                    <ImageButton android:id="@id/btn_solution" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/solution_btn" />
+                    <ImageButton android:id="@id/btn_level" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/level_btn" />
+                </LinearLayout>
+                <RelativeLayout android:gravity="bottom" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                    <ImageButton android:id="@id/btn_restart_drawer" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/restart_btn" android:layout_alignParentLeft="true" />
+                    <ImageButton android:id="@id/btn_info" android:background="@android:color/transparent" android:layout_width="40.0dip" android:layout_height="50.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/info_gs" android:layout_alignParentRight="true" />
+                    <ImageButton android:id="@id/btn_help" android:background="@android:color/transparent" android:layout_width="40.0dip" android:layout_height="50.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/help_gs" android:layout_toLeftOf="@id/btn_info" android:layout_alignTop="@id/btn_help" />
+                    <ImageButton android:id="@id/btn_audio" android:background="@android:color/transparent" android:layout_width="40.0dip" android:layout_height="50.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/st_btn" android:layout_toLeftOf="@id/btn_help" android:layout_alignTop="@id/btn_help" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom|center|left" android:orientation="vertical" android:id="@id/layout_ad" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginLeft="0.0dip" />
+        <RelativeLayout android:gravity="top" android:layout_gravity="top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70.0dip">
+            <include android:layout_gravity="center|left|top" android:id="@id/alert_dialog_gameover" layout="@layout/alert_dialog_gameover" />
+            <include android:layout_gravity="center|left|top" android:id="@id/alert_dialog_challengeover" layout="@layout/alert_dialog_challengeover" />
+            <LinearLayout android:layout_gravity="center|left|top" android:orientation="vertical" android:id="@id/layout_ad_top" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginLeft="0.0dip" android:layout_below="@id/alert_dialog_gameover" />
+        </RelativeLayout>
+        <include android:id="@id/promo" layout="@layout/promo" />
+    </FrameLayout>
+</LinearLayout>

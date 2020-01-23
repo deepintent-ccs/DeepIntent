@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_map_layout" android:background="@drawable/downloading_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:panel="http://schemas.android.com/apk/res/com.piaomsg">
+    <include android:layout_marginTop="10.0dip" android:layout_alignParentTop="true" layout="@layout/location_input_layout" />
+    <com.piaomsg.ui.customview.PiaoMsgItem android:id="@id/piaoxin_on_map" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    <com.piaomsg.ui.customview.ZoomControls android:id="@id/zoomControls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:id="@id/map_publish_layout" android:background="@drawable/map_publish_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0px" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/map_btn_publish_piaoxin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_btn_publish_piaoxin_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_btn_publish_piaoxin" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/releaseWingLetter" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/map_btn_publish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_btn_publish_piaotu_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_btn_publish" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map_publish_piaotu" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/map_confirm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_confirm" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <com.piaomsg.ui.customview.Panel android:id="@id/bottomPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" panel:animationDuration="120" panel:position="bottom" panel:handle="@id/panelHandle" panel:content="@id/panelContent" panel:openedHandle="@drawable/slide_down" panel:closedHandle="@drawable/slide_up">
+        <ImageButton android:id="@id/panelHandle" android:layout_width="fill_parent" android:layout_height="32.0px" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/panelContent" android:background="@drawable/slide_bg" android:layout_width="fill_parent" android:layout_height="58.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/map_publish_piaoxin" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_publish_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_publish_piaoxin" />
+                <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/releaseWingLetter" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/map_auto_gps" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_auto_gps_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_auto_gps" />
+                <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_location" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/map_hand_gps" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_hand_gps_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_hand_gps" />
+                <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/manual_location" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/map_refrush" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_refrush_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_refrush" />
+                <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/map_logout" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/map_logout_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_logout" />
+                <TextView android:textSize="12.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.piaomsg.ui.customview.Panel>
+</RelativeLayout>
