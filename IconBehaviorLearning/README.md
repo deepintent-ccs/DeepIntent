@@ -1,13 +1,29 @@
-### functional
+# Icon Behavior Learning
 
-prepare.py -> prepare texts, split training data, testing data
+Icon behavior learning contains the deep learning model to learn UI widget's feature. It uses DenseNet to extract icon features, bidirectional RNNs to extract text features, and then jointly learn and update the icon features and text features at the same time, with the help and guidance of each other.
 
-model.py -> train -> training pkl
-model.py -> test -> testing pkl
-model.py -> feature -> trained model, target pkl
+## Introduction
 
-### prepared data
+This folder mainly contains the model structure, training and predicting codes. It also includes some codes to pre-process the raw data, metrics of prediction results, and so on. Next, we briefly introduce each Python file.
 
-1. real experimental data (benign, malicious) -> train and test
-2. data to test prepare process (results of the previous example)
-3. pre-trained model, to get prediction probabilities and features
++ conf.py: 
++ layers.py: 
++ metrics.py: 
++ model.py: 
++ pre_process.py: 
++ predict.py:
++ prepare.py:
++ tools.py: 
++ train.py: 
+
+## Requirements
+
+## Entry Point
+
+There are mainly 3 executable Python scripts as entry points:
+
+### Pre-process
+
+### Train
+
+### Predict
