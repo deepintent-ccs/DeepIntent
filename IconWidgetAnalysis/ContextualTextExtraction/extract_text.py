@@ -222,8 +222,13 @@ def example():
 
 
 def main():
-    from conf import example_conf
-    execute_with_conf(example_conf)
+    import sys
+    args = sys.argv[1:]
+
+    # check example or not
+    if '--example' in args:
+        from conf import example_conf
+        execute_with_conf(example_conf)
 
     # example()
 
