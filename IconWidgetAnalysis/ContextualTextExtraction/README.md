@@ -1,40 +1,46 @@
 # Contextual Text Extraction
 
-After the static analysis process, we next extract contextual texts. 
+After the static analysis process, we next extract contextual texts. This step also locate the target icon data based on the static analysis results.
 
 ## Introduction
 
-This folder mainly contains the model structure, training and predicting codes. It also includes some codes to pre-process the raw data, metrics of prediction results, and so on. Next, we briefly introduce each Python file.
+This folder mainly contains the codes to extract layout texts, embedded texts and resource texts. The inputs of this step are the program analysis results and decoded APK files, and outputs <icon, texts, permission> triple to train the model.
 
-+ conf.py: the configuration of 
-+ extract_text.py: 
-+ handle_embedded_text.py: 
-+ handle_layout_text.py: 
-+ handle_resource_text.py: 
-+ load_data.py:
-+ tools.py:
-+ translate_text.py: 
+Additionally, to extract the embedded texts, we also have to select the largest icon from the same icon with different settings (e.g., different resolution). It might also translate any other languages to English to increase the text quality.
+
+The content Python files are described as follows.
+
++ conf.py: the configuration of the extraction steps.
++ extract_text.py: the main entry of this step, use `ExtractionConf` (defined in conf.py) to direct the path and other options.
++ handle_embedded_text.py: select target icon and extract embedded texts by using OCR technique.
++ handle_layout_text.py: extract layout texts, could extract texts from parent layout or the whole layout page.
++ handle_resource_text.py: get resource texts by spliting `_` and camel case.
++ load_data.py: load program analysis results, could be raw `.csv` file or zipped `.zip` file.
++ tools.py: tools to parse XML, handle icons, and save or load data.
++ translate_text.py: translate any other language to English, optional.
 
 ## Requirements
 
-+ Python >= 3.6
-+ numpy 
-+ 
++ Python >= 3.6.0
++ numpy >= 1.16.0
++ opencv-python >= 3.4.3 (cv2)
++ pytesseract >= 0.2.6
++ Pillow >= 5.4.1 (PIL)
++ translate >= 3.4.0 (optional, to translate any other language to English through Internet)
 
 ## Entry Point
 
-There are mainly 3 executable Python scripts as entry points:
+There are mainly 5 executable Python scripts as entry points:
 
-In detail, there are mainly related to 3 Python files.
+### 1. extract_text.py
 
-1. `handle_layout_text.py --example` will extract layout texts based on the hard-coded meta data. The meta data is written in the Python file and contains target image name, related layout file, related string dictionary file, extraction type ('parent' or 'total', 'parent' means only extract the texts from the parent layout, and 'total' means to lookup all the layout file). You can run your own data by modify the meta data and provided required files (i.e., layout file and string dictionary file), or use the command line arguments to provide them.
++ Input
++ Output
 
-2. `handle_embedded_text.py --example` will extract embedded texts from image by using OCR technique. To run this script, please install pytesseract with at least Chinese, English, Japanese and Korean support first, and download the pre-trained EAST model through the following link. This example will excute each image stored in `data/text_example/ocr`. The image name also describe the corresponding language, e.g., `chinese_1.png` means the image contains Chinese character and the index is 1.
+### 2. handle_layout_text.py
 
-3. `extract_text.py` is a simple text extraction example. Given the image names and decoded APKs, the script will extract layout texts, embedded texts and resource texts for each image, and then output the (APK name, image name, extracted texts) tuple into `data/text_example/total/data.pkl`. The results are stored in Python's PKL format. To run this script, please 1) decode the APKs stored in the `data/text_example/total/apk` into the `data/text_example/total/decoded_apk` folder by using [APKTool](https://ibotpeaches.github.io/Apktool/), 2) download the pre-trained EAST model and put it in `data/frozen_east_text_detection.pb` through the following BaiduYun link.
+### 3. handle_embedded_text.py
 
-### Pre-process
+### 4. handle_resource_text.py
 
-### Train
-
-### Predict
+### 5. translate_text.py
