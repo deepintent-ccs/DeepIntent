@@ -24,9 +24,16 @@ def load_program_analysed_csv(path):
     file_name, file_ext = os.path.splitext(base_name)
 
     if file_ext == '.zip':
-        reader = csv.reader(zip_string_iter(path, file_name))
-        if reader is None:
-            reader = csv.reader(zip_string_iter(path, file_name + '.csv'))
+        # get the zipped file name
+        zipped_name = ''
+        with zipfile.ZipFile(path, mode='r') as zf:
+            if file_name in zf.namelist():
+                zipped_name = file_name
+            elif file_name + '.csv' in zf.namelist():
+                zipped_name = file_name + '.csv'
+            elif len(zf.namelist()) == 1:
+                zipped_name = zf.namelist()[0]
+        reader = csv.reader(zip_string_iter(path, zipped_name))
     else:
         reader = csv.reader(codecs.open(path))
 
@@ -47,10 +54,8 @@ def zip_string_iter(path, name):
     :return:
         line: String, Textual contents line by line.
     """
-    with zipfile.ZipFile(path, mode="r") as zf:
-        if name not in zf.filelist:
-            return None
-        with zf.open(name, mode="r") as zi:
+    with zipfile.ZipFile(path, mode='r') as zf:
+        with zf.open(name, mode='r') as zi:
             for line in zi:
                 line = codecs.decode(line)
                 yield line
