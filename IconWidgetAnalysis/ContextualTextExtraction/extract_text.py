@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 
-from conf import check_conf
+import os
+
+from conf import check_conf, ExtractionConf
 from tools import save_pkl_data, ProcessPrinter
 from load_data import load_data
 from handle_layout_text import handle_layout_text
@@ -48,10 +50,10 @@ def extract_drawable_images(data_pa, path_app, log_level=0):
     :param path_app:
         String, the path of the decoded Apps.
     :param log_level:
-        Int,
+        Int, 0 to 2, silent, or normal (process bar), or verbose mode.
 
     :return:
-        List,
+        List, compressed images.
     """
     results = []
     log_helper = ProcessPrinter(len(data_pa) / 20, log_level)
@@ -164,22 +166,47 @@ def execute_with_conf(conf):
     # merge and save the triple, <image, texts, permissions>
     print('finished and save')
     assert len(data_pa) == len(drawable_images) == len(texts)
-    # format: [app, image, layout, {permissions}, (compressed_img), [[layout_texts], [embedded_texts], [res_texts]]]
     # format: [(compressed_img), [[layout_texts], [embedded_texts], [res_texts]], {permissions}]
     data = [[drawable_images[i]] + [texts[i]] + [data_pa[i][-1]] for i in range(len(data_pa))]
     save_pkl_data(conf.path_save, data)
 
 
 def example():
-    import os
-    from conf import ExtractionConf
+    path_current = os.path.dirname(os.path.abspath(__file__))
+    path_data = os.path.join(path_current, '..', '..', 'data')
+    example_conf = ExtractionConf(
+        # path
+        path_pa=os.path.join(path_data, 'text_example', 'total', 'example.zip'),
+        path_app=os.path.join(path_data, 'text_example', 'total', 'apk_decoded'),
+        path_east=os.path.join(path_data, 'frozen_east_text_detection.pb'),
+        path_save=os.path.join(path_data, 'text_example', 'total', 'data.pkl'),
+        # log
+        log_level=2,
+        # layout text extraction
+        layout_text_range='parent',
+        # embedded text extraction
+        ocr_width=320,
+        ocr_height=320,
+        ocr_padding=0.05,
+        enable_ocr_cache=True,
+        # translation
+        enable_translate=True,
+        enable_translate_cache=True
+    )
+    execute_with_conf(example_conf)
 
+
+def total_example():
+    # path
+    path_current = os.path.dirname(os.path.abspath(__file__))
+    path_data = os.path.join(path_current, '..', '..', 'data')
+    # conf
     benign_conf = ExtractionConf(
         # path
-        path_pa=os.path.join('..', '..', 'data', 'example', 'example_result_widget_permission_mapping_benign.csv.zip'),
-        path_app='H:' + os.path.sep + os.path.join('dataset', 'AppsIcon', 'benign_decoded'),
-        path_east=os.path.join('..', '..', 'data', 'frozen_east_text_detection.pb'),
-        path_save=os.path.join('..', '..', 'data', 'example', 'raw_data.benign.pkl'),
+        path_pa=os.path.join(path_data, 'example', 'benign_pa.zip'),
+        path_app=os.path.join(path_data, 'example', 'benign_decoded'),
+        path_east=os.path.join(path_data, 'frozen_east_text_detection.pb'),
+        path_save=os.path.join(path_data, 'example', 'raw_data.benign.pkl'),
         # log
         log_level=1,
         # layout text extraction
@@ -196,11 +223,10 @@ def example():
 
     malicious_conf = ExtractionConf(
         # path
-        path_pa=os.path.join('..', '..', 'data', 'example',
-                             'example_result_widget_permission_mapping_malicious.csv.zip'),
-        path_app='H:' + os.path.sep + os.path.join('dataset', 'AppsIcon', 'malicious_decoded'),
-        path_east=os.path.join('..', '..', 'data', 'frozen_east_text_detection.pb'),
-        path_save=os.path.join('..', '..', 'data', 'example', 'raw_data.mal.pkl'),
+        path_pa=os.path.join(path_data, 'example', 'malicious_pa.zip'),
+        path_app=os.path.join(path_data, 'example', 'malicious_decoded'),
+        path_east=os.path.join(path_data, 'frozen_east_text_detection.pb'),
+        path_save=os.path.join(path_data, 'example', 'raw_data.mal.pkl'),
         # log
         log_level=1,
         # layout text extraction
@@ -222,15 +248,40 @@ def example():
 
 
 def main():
+    """This script can be directly used in command line.
+
+    If the arguments contain `--example`, the script will run a simple example
+    to extract contextual texts stored in `data/text_example/total` folder with
+    prepared program analysis outputs (example.zip). *Note that, please decode
+    the APKs into `data/text_example/total/apk_decoded` to run the example.*
+
+    If the arguments contain `--total_example`, the script will handle benign and
+    malicious APKs stored in `data/example` (should be downloaded from BaiduYun).
+    *Note that, 1) please run program analysis and put the zipped output in the
+    data folder (e.g., `benign_pa.csv` contained in `benign_pa.zip`), 2) decode
+    the APKs (e.g., `benign_decoded` for benign APKs).*
+
+    Otherwise, users could specify data paths through arguments, 4 arguments are
+    necessary, namely `--path_pa` indicates the path of program analysis results,
+    `--path_app` indicates the decoded apps, `--path_east` means the pre-trained
+    EAST model (frozen_east_text_detection.pb, can be download from BaiduYun), and
+    `--path_save` indicates where to save the outputs. Other optional arguments
+    please see the README.md file.
+    """
     import sys
     args = sys.argv[1:]
 
-    # check example or not
+    # example or total example
     if '--example' in args:
-        from conf import example_conf
-        execute_with_conf(example_conf)
-
-    # example()
+        example()
+    elif '--total_example' in args:
+        total_example()
+    else:
+        # extraction texts based on arguments
+        from conf import ExtractionConfArgumentParser
+        parser = ExtractionConfArgumentParser()
+        args_conf = parser.parse(args)
+        execute_with_conf(args_conf)
 
 
 if __name__ == '__main__':

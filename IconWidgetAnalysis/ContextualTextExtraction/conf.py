@@ -73,26 +73,3 @@ class ExtractionConfArgumentParser:
             enable_translate=args.translate,
             enable_translate_cache=args.translate_cache
         )
-
-
-_current_abs_path = os.path.dirname(os.path.abspath(__file__))
-_data_abs_path = os.path.join(_current_abs_path, '..', '..', 'data')
-example_conf = ExtractionConf(
-    # path
-    path_pa=os.path.join(_data_abs_path, 'text_example', 'example.csv.zip'),
-    path_app=os.path.join(_data_abs_path, 'text_example', 'decoded_apk'),
-    path_east=os.path.join(_data_abs_path, 'frozen_east_text_detection.pb'),
-    path_save=os.path.join(_data_abs_path, 'text_example', 'data.pkl'),
-    # log
-    log_level=2,
-    # layout text extraction
-    layout_text_range='parent',
-    # embedded text extraction
-    ocr_width=320,
-    ocr_height=320,
-    ocr_padding=0.05,
-    enable_ocr_cache=True,
-    # translation
-    enable_translate=True,
-    enable_translate_cache=True
-)
