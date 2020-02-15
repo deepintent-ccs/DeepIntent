@@ -40,10 +40,10 @@ def handle_layout_text(app_name, img_name, layout, path_decoded, search_range):
     path_res = os.path.join(path_app, 'res')
 
     # strings path and layout path
-    path_values = get_resource_path(path_res, 'values', 'strings.xml')
     path_layout = get_resource_path(path_res, 'layout', layout)
+    path_values = get_resource_path(path_res, 'values', 'strings.xml')
 
-    return handle_layout_text_from_xml(img_name, path_values, path_layout, search_range)
+    return handle_layout_text_from_xml(img_name, path_layout, path_values, search_range)
 
 
 def handle_layout_text_from_xml(img_name, path_layout, path_string_values, search_range):
