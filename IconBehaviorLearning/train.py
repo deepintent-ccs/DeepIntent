@@ -40,9 +40,6 @@ def save_on_condition(condition, path_out, content):
 
 
 def train(model_conf, train_conf):
-    model_conf = ModelConf()
-    train_conf = TrainConf()
-
     # set up random seed
     random.seed(train_conf.random_seed)
 
@@ -99,6 +96,10 @@ def train(model_conf, train_conf):
         save_on_condition(train_conf.is_log_history, path_prefix + '.his', history.history)
         # save the trained model
         model.save(path_prefix + '.h5')
+        # save the training meta data, e.g., TrainConf, vocab2id, label2id
+        save_pkl_data(path_prefix + '.meta', {
+            'TrainConf': train_conf, 'vocab2id': vocab2id, 'label2id': label2id
+        })
 
         # test if test_ratio > 0
         if test_ratio > 0:
@@ -113,11 +114,11 @@ def train(model_conf, train_conf):
                 save_pkl_data(path_predict, [y_predict, y_test])
 
             # evaluate
-            scores = metrics.evaluate(y_true, y_predict, predict_threshold)
-            metrics.display_scores(scores, label_names)
-            scores.append(scores)
+            scores_current = metrics.evaluate(y_true, y_predict, predict_threshold)
+            metrics.display_scores(scores_current, label_names)
+            scores.append(scores_current)
 
-        # prepare for next loop
+        # prepare for the next loop
         if train_conf.is_data_refresh:
             data_train, data_valid, data_test = prepare.prepare_data(
                 data, model_conf.img_shape, model_conf.img_re_sample,
@@ -140,8 +141,46 @@ def train(model_conf, train_conf):
                                                is_k_print=True, fo=fo)
 
 
+def total_example():
+    from PIL import Image
+
+    model_conf = ModelConf(
+        # image feature
+        img_shape=(128, 128, 4), img_re_sample=Image.BILINEAR,
+        img_init_channels=4, img_init_kernel=(7, 7), img_init_pooling=False,
+        img_num_blocks=4, img_num_layers=4, img_growth_rate=4,
+        img_use_bottleneck=True, img_compression=1.0, img_dropout=0.0,
+        # text feature
+        text_length=20, text_embedding_dim=100,
+        # feature
+        feature_dim_half=100, feature_dropout=0.5,
+        # attention
+        att_dim=100
+    )
+
+    path_current = os.path.dirname(os.path.abspath(__file__))
+    path_data = os.path.join(path_current, '..', 'data')
+    train_conf = TrainConf(
+        # train (and test) the model
+        code_name='temp', repeat_times=3, random_seed=666,
+        # path
+        path_data=os.path.join(path_data, 'total', 'data.benign.pkl'),
+        path_output=os.path.join(path_data, 'total', '_output'),
+        # data partition
+        train_ratio=0.7, valid_ratio=0.1, test_ratio=0.2, is_data_refresh=True,
+        # callbacks
+        early_stop_patients=3,
+        # fit parameters
+        batch_size=64, epochs=40, verbose=1, monitor_type='val_loss',
+        # log option
+        is_log_history=True, is_log_prediction=True, is_log_avg_score=True
+    )
+
+    train(model_conf, train_conf)
+
+
 def main():
-    pass
+    total_example()
 
 
 if __name__ == '__main__':

@@ -303,7 +303,7 @@ def execute_with_conf(conf, vocab2id=None, label2id=None):
         index. It is generated based on the conf.target_groups.
 
     :return:
-        None.
+        result: Tuple, (data, vocab2id, label2id).
     """
     # load data
     data = load_pkl_data(conf.path_data_in)
@@ -319,12 +319,15 @@ def execute_with_conf(conf, vocab2id=None, label2id=None):
 
 
 def total_example():
-    from conf import PreProcessConf, target_groups, _data_abs_path
+    from conf import PreProcessConf, target_groups
+
+    path_current = os.path.dirname(os.path.abspath(__file__))
+    path_data = os.path.join(path_current, '..', 'data')
 
     conf_benign = PreProcessConf(
         # path
-        path_data_in=os.path.join(_data_abs_path, 'total', 'raw_data.benign.pkl'),
-        path_data_out=os.path.join(_data_abs_path, 'total', 'data.benign.pkl'),
+        path_data_in=os.path.join(path_data, 'total', 'raw_data.benign.pkl'),
+        path_data_out=os.path.join(path_data, 'total', 'data.benign.pkl'),
         # image
         image_min_size=5,
         image_wh_ratio=10,
@@ -336,8 +339,8 @@ def total_example():
 
     conf_mal = PreProcessConf(
         # path
-        path_data_in=os.path.join(_data_abs_path, 'total', 'raw_data.mal.pkl'),
-        path_data_out=os.path.join(_data_abs_path, 'total', 'data.mal.pkl'),
+        path_data_in=os.path.join(path_data, 'total', 'raw_data.mal.pkl'),
+        path_data_out=os.path.join(path_data, 'total', 'data.mal.pkl'),
         # image
         image_min_size=5,
         image_wh_ratio=10,
@@ -349,7 +352,7 @@ def total_example():
 
     print('benign')
     _, v2id, l2id = execute_with_conf(conf_benign)
-    print('mal')
+    print('malicious')
     execute_with_conf(conf_mal, v2id, l2id)
 
 

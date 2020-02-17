@@ -12,7 +12,7 @@ import numpy as np
 from tools import image_decompress
 
 
-def prepare_data(data, image_size, re_sample_type, text_len,
+def prepare_data(data, image_shape, re_sample_type, text_len,
                  label_num, train_ratio, valid_ratio):
     import random
     from keras.preprocessing.sequence import pad_sequences
@@ -20,10 +20,11 @@ def prepare_data(data, image_size, re_sample_type, text_len,
     # random shuffle the data
     random.shuffle(data)
 
-    # prepare the
+    # prepare the data
+    image_size, image_channel = image_shape[:2], image_shape[-1]
     texts, images, labels = [], [], []
     for img_data, tokens, perms in data:
-        images.append(prepare_image(img_data, image_size, re_sample_type))
+        images.append(prepare_image(img_data, image_size, image_channel, re_sample_type))
         texts.append(tokens)
         labels.append(prepare_multi_label_list(perms, label_num))
 
@@ -44,11 +45,18 @@ def prepare_data(data, image_size, re_sample_type, text_len,
     return data_train, data_valid, data_test
 
 
-def prepare_image(img_data, target_size, re_sample_type):
+def prepare_image(img_data, target_size, target_channel, re_sample_type):
     # resize the image
     img = image_decompress(*img_data)
     img = img.resize(target_size, re_sample_type)
-    img = img.convert('RGBA')
+
+    # convert image
+    if target_channel == 4:
+        img = img.convert('RGBA')
+    elif target_channel == 3:
+        img = img.convert('RGB')
+    elif target_channel == 1:
+        img = img.convert('L')
 
     # transform to 0.0 to 1.0 values
     img = np.array(img) / 255.0
@@ -65,8 +73,8 @@ def prepare_multi_label_list(target, label_nums):
 def prepare_split_data(data, train_ratio, valid_ratio):
     import math
 
-    pivot_train = math.floor(len(data) * train_ratio)
-    pivot_valid = pivot_train + math.floor(len(data) * valid_ratio)
+    pivot_train = math.floor(len(data[0]) * train_ratio)
+    pivot_valid = pivot_train + math.floor(len(data[0]) * valid_ratio)
 
     data_train = [d[:pivot_train] for d in data]
     data_valid = [d[pivot_train: pivot_valid] for d in data]
