@@ -98,7 +98,7 @@ def train(model_conf, train_conf):
         model.save(path_prefix + '.h5')
         # save the training meta data, e.g., TrainConf, vocab2id, label2id
         save_pkl_data(path_prefix + '.meta', {
-            'TrainConf': train_conf, 'vocab2id': vocab2id, 'label2id': label2id
+            'ModelConf': model_conf, 'vocab2id': vocab2id, 'label2id': label2id
         })
 
         # test if test_ratio > 0
@@ -126,7 +126,7 @@ def train(model_conf, train_conf):
             )
             (x_train, y_train), (x_valid, y_valid), (x_test, y_test) = data_train, data_valid, data_test
 
-    if test_ratio > 0:
+    if test_ratio > 0 and len(scores) > 0:
         # average score
         avg_scores = metrics.compute_mean_var(scores)
         metrics.display_average_scores(avg_scores, label_names, train_conf.repeat_times)
@@ -162,9 +162,9 @@ def total_example():
     path_data = os.path.join(path_current, '..', 'data')
     train_conf = TrainConf(
         # train (and test) the model
-        code_name='temp', repeat_times=3, random_seed=666,
+        code_name='example', repeat_times=3, random_seed=666,
         # path
-        path_data=os.path.join(path_data, 'total', 'data.benign.pkl'),
+        path_data=os.path.join(path_data, 'total', 'benign.total.pkl'),
         path_output=os.path.join(path_data, 'total', '_output'),
         # data partition
         train_ratio=0.7, valid_ratio=0.1, test_ratio=0.2, is_data_refresh=True,
