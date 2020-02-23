@@ -22,7 +22,7 @@ def predict(predict_conf):
     meta_re_sample_type = meta['ModelConf'].img_re_sample
     meta_text_len = meta['ModelConf'].text_length
     meta_label_num = len(meta['label2id'])
-    meta_id2label = id2label = {v: k for k, v in meta['label2id'].items()}
+    meta_id2label = {v: k for k, v in meta['label2id'].items()}
 
     # load model
     model = keras.models.load_model(predict_conf.path_model, custom_objects={
@@ -43,7 +43,7 @@ def predict(predict_conf):
 
     # print metric results
     scores = evaluate(y_true, y_predict, predict_conf.threshold)
-    label_names = [id2label[i] for i in range(len(meta_id2label))]
+    label_names = [meta_id2label[i] for i in range(len(meta_id2label))]
     display_scores(scores, label_names)
 
 

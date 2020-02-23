@@ -282,7 +282,7 @@ def stem_tokens(tokens):
     return [porter_stemmer.stem(t) for t in tokens]
 
 
-def pre_process_save_results(path_out, v2id, l2id, data):
+def pre_process_save_results(path_out, data, v2id, l2id):
     save_pkl_data(path_out, [(v2id, l2id), data])
 
 
