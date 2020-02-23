@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 
 import os
-import codecs
 import pickle
 
 import keras
@@ -10,128 +9,214 @@ import PIL.Image as Image
 from pyod.models.knn import KNN
 from pyod.models.auto_encoder import AutoEncoder
 
+import metrics
 from layers import CoAttentionParallel
 
-IMG_SHAPE = (128, 128, 4)
-TEXT_MAX_LEN = 20
+
+# =========================
+# data maintenance
+# =========================
 
 
-def save_pkl_data(fp, data):
-    with open(fp, "wb") as fo:
+def save_pkl_data(path, data):
+    with open(path, 'wb') as fo:
         pickle.dump(data, fo)
 
 
-def load_pkl_data(fp):
-    with open(fp, "rb") as fi:
+def load_pkl_data(path):
+    with open(path, 'rb') as fi:
         data = pickle.load(fi)
     return data
 
 
-def load_model(fp_model):
-    model = keras.models.load_model(fp_model, custom_objects={
-        "CoAttentionParallel": CoAttentionParallel
+# =========================
+# load model and data
+# =========================
+
+
+def load_model(path_model):
+    model = keras.models.load_model(path_model, custom_objects={
+        'CoAttentionParallel': CoAttentionParallel
     })
-    # print(model.summary())
     extract_f = keras.models.Model(
-        inputs=model.input, outputs=model.get_layer("co_attention_para_1").output
+        inputs=model.input, outputs=model.get_layer('feature').output
     )
     extract_p = model
 
     return extract_f, extract_p
 
 
-def prepare_image(img, target_image_shape=IMG_SHAPE):
-    target_image_size = target_image_shape[:2]
-    target_image_mode = "RGBA" if target_image_shape[-1] == 4 else "RGB"
-    img = img.resize(target_image_size, Image.BILINEAR)
-    img = img.convert(target_image_mode)
+def load_meta(path_model_meta):
+    meta = load_pkl_data(path_model_meta)
 
+    image_shape = meta['ModelConf'].img_shape
+    re_sample_type = meta['ModelConf'].img_re_sample
+    text_len = meta['ModelConf'].text_length
+    id2label = {v: k for k, v in meta['label2id'].items()}
+    permission_names = [id2label[i] for i in range(len(id2label))]
+
+    return image_shape, re_sample_type, text_len, permission_names
+
+
+# =========================
+# prepare data
+# =========================
+
+
+def prepare_training_data(data, img_shape, re_sample_type, text_len, permission_names):
+    img_size, img_channel = img_shape[:2], img_shape[-1]
+
+    input_images, input_texts, permissions = [], [], []
+    for img_data, tokens, permission_label in data:
+        input_images.append(prepare_image(img_data, img_size, img_channel, re_sample_type))
+        input_texts.append(prepare_text(tokens, text_len))
+        permissions.append(prepare_permissions(permission_label, permission_names))
+
+    input_images = np.array(input_images)
+    input_texts = np.array(input_texts)
+    inputs = [input_images, input_texts]
+
+    return inputs, permissions
+
+
+def prepare_testing_data(data, img_shape, re_sample_type, text_len, permission_names):
+    data_like_training, outlier_labels = [], []
+    for i in range(len(data)):  # img_data, tokens, permission_label, outlier_label
+        data_like_training.append(data[i][:3])
+        outlier_labels.append(data[i][-1])
+
+    inputs, permissions = prepare_training_data(
+        data_like_training, img_shape, re_sample_type, text_len, permission_names
+    )
+
+    return inputs, permissions, outlier_labels
+
+
+def prepare_image(img_data, target_size, target_channel, re_sample_type):
+    # resize the image
+    img = image_decompress(*img_data)
+    img = img.resize(target_size, re_sample_type)
+
+    # convert image
+    if target_channel == 4:
+        img = img.convert('RGBA')
+    elif target_channel == 3:
+        img = img.convert('RGB')
+    elif target_channel == 1:
+        img = img.convert('L')
+
+    # transform to 0.0 to 1.0 values
     np_img = np.array(img) / 255.0
+
     return np_img
 
 
-def prepare_text(words, w2id, max_len=TEXT_MAX_LEN):
-    words = [w2id.get(w, 1) for w in words]
-    if len(words) < TEXT_MAX_LEN:
+def image_decompress(img_mode, img_size, img):
+    """Decompress the image.
+
+    Given the compressed image tuple `temp`, the parameter could simply be `*temp`.
+
+    :param img_mode:
+        String, image's color mode, such as RGB.
+    :param img_size:
+        Tuple of int, the size of image, that is (width, height).
+    :param img:
+        The compressed image data.
+
+    :return:
+        image: Image object, which contains image binaries.
+    """
+    img = Image.frombytes(img_mode, img_size, img)
+
+    return img
+
+
+def prepare_text(words, max_len):
+    if len(words) < max_len:
         words = words + [0] * (max_len - len(words))
     else:
         words = words[:max_len]
     return np.array(words)
 
 
-def load_data(fd_data, meta=None):
-    # load meta data
-    fp_meta = os.path.join(fd_data, "meta.txt")
-    if meta is None:
-        meta = []
-        assert os.path.exists(fp_meta)
-        with codecs.open(fp_meta, encoding="UTF-8", mode="r") as fi:
-            meta.append(eval(fi.readline()))  # label2id
-            meta.append(eval(fi.readline()))  # word2id
-
-    # load readable data
-    data = []
-    with codecs.open(os.path.join(fd_data, "data.txt"), encoding="UTF-8", mode="r") as fi:
-        for line in fi:
-            current = eval(line)
-            # tr: i, perms, tokens
-            # te: i, perms, marks, tokens
-            data.append(current[:-1] + [prepare_text(current[-1], meta[1])])
-
-    # load image
-    images = []
-    for fn_img in os.listdir(os.path.join(fd_data, "images")):
-        fp_img = os.path.join(fd_data, "images", fn_img)
-        img = Image.open(fp_img)
-        images.append(prepare_image(img))
-
-    # tidy
-    info, labels = [], []
-    input_images, input_texts = [], []
-    for i in range(len(data)):
-        info.append(data[i][:-1])
-        labels.append(data[i][3])
-        input_images.append(images[i])
-        input_texts.append(data[i][-1])
-    inputs = [input_images, input_texts]
-
-    return inputs, labels, info, meta
+def prepare_permissions(label, permission_names):
+    return {permission_names[p] for p in label}
 
 
-def extract_marks(info, labels, target_labels):
-    marks = [d[-1] for d in info]
-    info = [d[:-1] for d in info]
-
-    marks_new = []
-    for i in range(len(labels)):
-        m = ["-"] * len(target_labels)
-        for j in range(len(labels[i])):
-            label = labels[i][j]
-            m[target_labels.index(label)] = marks[i][j]
-        marks_new.append(m)
-
-    return marks_new, info
+# =========================
+# outlier detection
+# =========================
 
 
 def weight_knn(knn, x, xs, k=5):
-    import math
     # get the k nearest neighbors of the current point
-    dist_arr, indexes = knn.tree_.query([x], k=k)
-    neighbors = [xs[i] for i in indexes[0]]
+    neighbors = get_k_nearest_neighbors(knn, x, xs, k)
 
+    # compute distance
     dist = []
-    for i in range(len(neighbors) - 1):
-        for j in range(i + 1, len(neighbors)):
-            x0, x1 = neighbors[i], neighbors[j]
+    if len(neighbors) == 0:
+        # no neighbor, return the default weight
+        dist.append(1.0)
+    elif len(neighbors) == 1:
+        # only one neighbor
+        # compute distance between the current point and neighbor
+        dist.append(distance_euclidean(x, neighbors[0]))
+    else:
+        # more than one different neighbor
+        # compute distance between each others
+        for i in range(len(neighbors) - 1):
+            for j in range(i + 1, len(neighbors)):
+                x0, x1 = neighbors[i], neighbors[j]
+                dist.append(distance_euclidean(x0, x1))
 
-            d = 0.0
-            for k in range(len(x0)):
-                d += (x0[k] - x1[k]) * (x0[k] - x1[k])
-            dist.append(math.sqrt(d))
+    # average and inverse
     dist = sum(dist) / len(dist)
-    # dist = np.mean(dist_arr, axis=1)[-1]
-
     return 1.0 / dist
+
+
+def get_k_nearest_neighbors(knn, x, xs, k):
+    neighbors_by_dist = {}  # {dist: [np.array, ... ]}
+
+    k_query = k
+    while sum([len(vs) for vs in neighbors_by_dist.values()]) < k:
+        dist_arr, indexes = knn.tree_.query([x], k=k_query)
+        neighbors = [xs[i] for i in indexes[0]]
+
+        for n in neighbors:
+            dist = distance_euclidean(x, n)
+            if dist not in neighbors_by_dist:
+                neighbors_by_dist[dist] = []
+                neighbors_by_dist[dist].append(n)
+            else:
+                # check and remove same neighbor
+                is_unique = True
+                for n2 in neighbors_by_dist[dist]:
+                    if np.all(n == n2):
+                        is_unique = False
+                        break
+                if is_unique:
+                    neighbors_by_dist[dist].append(n)
+
+        k_query *= 2
+        k_query = len(xs) if k_query >= len(xs) else k_query
+
+    neighbors = []
+    sorted_neighbors = sorted(neighbors_by_dist.items(), key=lambda item: item[0])
+    for dist, vectors in sorted_neighbors:
+        neighbors.extend(vectors)
+    return neighbors
+
+
+def distance_euclidean(x0, x1):
+    import math
+    assert len(x0) == len(x1)
+
+    d = 0.0
+    for k in range(len(x0)):
+        d += (x0[k] - x1[k]) * (x0[k] - x1[k])
+    d = math.sqrt(d)
+
+    return d
 
 
 def weight_combine(ws1, ws2):
@@ -145,230 +230,124 @@ def weight_combine(ws1, ws2):
     return cws
 
 
-def save_plt(fp_save):
-    import matplotlib.pyplot as plt
-
-    if fp_save.endswith(".png"):
-        plt.savefig(fp_save)
-    elif fp_save.endswith(".pdf"):
-        plt.savefig(fp_save, dpi=600, format="pdf")
-    plt.close("all")
-
-
-def plot_curve(title, title_y, x, y, fp_save=None):
-    import matplotlib.pyplot as plt
-    # from pylab import mpl
-    # mpl.rcParams['font.sans-serif'] = ['SimHei']  # 用来显示中文，不然会乱码
-
-    plt.plot(x, y)
-    plt.title(title)
-    plt.xlabel("Top-K")
-    plt.ylabel(title_y)
-
-    if fp_save is None:
-        plt.show()
-    else:
-        save_plt(fp_save)
-
-
-def plot_precision_recall(title, x, py, ry, fp_save=None):
-    import matplotlib.pyplot as plt
-
-    plt.title(title)
-    plt.xlabel("Top-K")
-    plt.ylabel("Precision/Recall")
-    plt.plot(x, py, label="Precision")
-    plt.plot(x, ry, label="Recall")
-    plt.legend()
-
-    if fp_save is None:
-        plt.show()
-    else:
-        save_plt(fp_save)
-
-
-def metric_permission_based_outlier(scores, marks, target_labels, title=None):
-    from pyod.utils.utility import get_label_n
-    from sklearn.metrics.ranking import roc_auc_score
-    from sklearn.metrics.classification import precision_score, recall_score
-
-    for i in range(len(target_labels)):
-        label_i = target_labels[i]
-
-        scores_i, y_true = [], []
-        for j in range(len(scores)):
-            if marks[j][i] != "-":
-                scores_i.append(scores[j][i])
-                y_true.append(1 if marks[j][i] == "n" else 0)
-
-        pk, rk = [], []
-        for k in range(1, len(y_true)):
-            y_predict = get_label_n(y_true, scores_i, k)
-            pk.append(precision_score(y_true, y_predict))
-            rk.append(recall_score(y_true, y_predict))
-
-        n = sum(y_true) - 1
-        if 0 <= n < len(pk):
-            # print(y_true)
-            # print(scores_i)
-            print("{}@{}/{}".format(label_i, n, len(scores_i)), pk[n], rk[n], roc_auc_score(y_true, scores_i))
-        else:
-            print("{}@{}/{}".format(label_i, n, len(scores_i)), 0.0, 0.0, 0.0)
-
-        if title is not None:
-            fp_save = os.path.join("results_weighted", title)
-            plot_curve("{}_{}_precision".format(title, label_i), "precision", list(range(1, len(y_true))), pk,
-                       fp_save=fp_save + "_{}_precision.pdf".format(label_i))
-            plot_curve("{}_{}_recall".format(title, label_i), "recall", list(range(1, len(y_true))), rk,
-                       fp_save=fp_save + "_{}_recall.pdf".format(label_i))
-
-
-def metric_overall_outlier(scores, weights, marks, title=None):
-    from pyod.utils.utility import get_label_n
-    from sklearn.metrics.ranking import roc_auc_score
-    from sklearn.metrics.classification import precision_score, recall_score
-
-    y_true = []
-    weighted_scores = []
-    for i in range(len(scores)):
-        score = 0.0
-        count_no_zero = 0
-        for w, s, m in zip(weights[i], scores[i], marks[i]):
-            if m != "-":
-                score += w * s
-                count_no_zero += 1
-        if count_no_zero > 0:
-            score = score / count_no_zero
-
-        # print(1 if "n" in marks[i] else 0, score, scores[i], weights[i], marks[i])
-        weighted_scores.append(score)
-        y_true.append(1 if "n" in marks[i] else 0)
-
-    pk, rk = [], []
-    for k in range(1, len(y_true)):
-        y_predict = get_label_n(y_true, weighted_scores, k)
-        pk.append(precision_score(y_true, y_predict))
-        rk.append(recall_score(y_true, y_predict))
-    n = sum(y_true)
-    print("overall@{}".format(n), len(y_true), pk[n], rk[n], roc_auc_score(y_true, weighted_scores))
-
-    if title is not None:
-        fp_save = os.path.join("results", "overall_" + title)
-        # plot_curve("overall_{}_precision".format(title), "precision", list(range(1, len(y_true))), pk,
-        #            fp_save=fp_save + "_precision.pdf")
-        # plot_curve("overall_{}_recall".format(title), "recall", list(range(1, len(y_true))), rk,
-        #            fp_save=fp_save + "_recall.pdf")
-        plot_precision_recall(
-            "", list(range(1, len(y_true))), pk, rk, fp_save=fp_save+".pdf"
-        )
-
-
-def training(fd_data, target_labels, extract_f):
+def training(path_data, img_shape, re_sample_type, text_len, permission_names, extract_f):
     # load training data
-    print("loading training data")
-    inputs_tr, labels_tr, info_tr, meta = load_data(fd_data)
+    print('loading training data')
+    data = load_pkl_data(path_data)  # img_data, tokens, perms
+    inputs, permissions = prepare_training_data(
+        data, img_shape, re_sample_type, text_len, permission_names
+    )
 
     # get features
-    print("generating training features")
-    f_tr = extract_f.predict(inputs_tr)
+    print('generating training features')
+    features = extract_f.predict(inputs)
 
     # train auto encoder model, knn model
-    print("training outlier model + knn model")
-    knn_trees = []
+    print('training outlier model + knn model')
     detectors = []
-    f_labels = []
-    for label in target_labels:
-        print("training", label, "...")
-        f_label = []
-        for i in range(len(labels_tr)):
-            if label in labels_tr[i]:
-                f_label.append(f_tr[i])
-        f_labels.append(f_label)
+    knn_trees = []
+    features_in_permissions = []  # features in each permission, [permission_id, feature_id]
+    for p in permission_names:
+        print('training', p, '...')
+        features_current = []
+        for i in range(len(permissions)):
+            if p in permissions[i]:
+                features_current.append(features[i])
+        features_in_permissions.append(features_current)
 
         detector = AutoEncoder(epochs=200, verbose=0)
-        detector.fit(f_label)
+        detector.fit(features_current)
         detectors.append(detector)
 
         knn = KNN()
-        knn.fit(f_label)
+        knn.fit(features_current)
         knn_trees.append(knn)
 
-    return detectors, knn_trees, meta, f_labels
+    return detectors, knn_trees, features_in_permissions
 
 
-def testing(fd_data, meta, target_labels, extract_f, extract_p, detectors, knn_trees, f_labels):
+def testing(path_data, img_shape, re_sample_type, text_len, permission_names,
+            extract_f, extract_p, detectors, knn_trees, features_in_labels):
     # load testing data
-    inputs, labels, info, _ = load_data(fd_data, meta=meta)  # teb -> test benign
-    marks, info = extract_marks(info, labels, target_labels)
+    data = load_pkl_data(path_data)  # img_data, tokens, perms, outlier_labels
+    inputs, permissions, outlier_labels = prepare_testing_data(
+        data, img_shape, re_sample_type, text_len, permission_names
+    )
+    # prediction weights
+    prediction_results = extract_p.predict(inputs).tolist()
+    prediction_weights = [[1.0 - w for w in ws] for ws in prediction_results]
     # get features
-    fs = extract_f.predict(inputs)
-    # permission based outlier
-    # outlier score, knn weight, prediction weight
-    prediction_weights = extract_p.predict(inputs).tolist()
+    features = extract_f.predict(inputs)
+    # outlier score, knn weight
     scores = []
     neighbour_weights = []
-    for i in range(len(fs)):
+    for i in range(len(features)):
         score, nw = [], []
-        for j in range(len(target_labels)):
-            label = target_labels[j]
-            if label in labels[i]:
-                score.append(detectors[j].decision_function([fs[i]])[0])
+        for p_index in range(len(permission_names)):
+            p_name = permission_names[p_index]
+            if p_name in permissions[i]:
+                score.append(detectors[p_index].decision_function([features[i]])[0])
             else:
                 score.append(0.0)
-            nw.append(weight_knn(knn_trees[j], fs[i], f_labels[j]))
+            nw.append(weight_knn(knn_trees[p_index], features[i], features_in_labels[p_index]))
         scores.append(score)
         neighbour_weights.append(nw)
 
-    return marks, scores, neighbour_weights, prediction_weights
+    return scores, neighbour_weights, prediction_weights, outlier_labels
+
+
+def total_example():
+    path_current = os.path.dirname(os.path.abspath(__file__))
+    path_data = os.path.join(path_current, '..', 'data', 'total')
+
+    # load meta data
+    path_meta = os.path.join(path_data, 'deepintent.meta')
+    image_shape, re_sample_type, text_len, permission_names = load_meta(
+        path_meta
+    )
+
+    # load co-attention model
+    print('loading model')
+    path_model = os.path.join(path_data, 'deepintent.model')
+    extract_f, extract_p = load_model(path_model)
+
+    # training
+    path_training = os.path.join(path_data, 'training.save.pkl')
+    detectors, knn_trees, features_in_permissions = training(
+        path_training, image_shape, re_sample_type, text_len, permission_names, extract_f
+    )
+
+    # testing and evaluation
+    # benign
+    print('testing benign')
+    path_testing_benign = os.path.join(path_data, 'benign.save.pkl')
+    scores_teb, nws_teb, pws_teb, labels_teb = testing(
+        path_testing_benign, image_shape, re_sample_type, text_len, permission_names,
+        extract_f, extract_p, detectors, knn_trees, features_in_permissions
+    )
+    print('evaluate benign')
+    cws_teb = weight_combine(nws_teb, pws_teb)
+    scores_combine_teb = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_teb, scores_teb)]
+    metrics.metric_permission_based_outlier(scores_combine_teb, labels_teb, permission_names)
+    metrics.metric_overall_outlier(scores_teb, cws_teb, labels_teb)
+
+    # malicious
+    print('testing malicious')
+    path_testing_malicious = os.path.join(path_data, 'malicious.save.pkl')
+    scores_tem, nws_tem, pws_tem, labels_tem = testing(
+        path_testing_malicious, image_shape, re_sample_type, text_len, permission_names,
+        extract_f, extract_p, detectors, knn_trees, features_in_permissions
+    )
+    print('evaluate malicious')
+    cws_tem = weight_combine(nws_tem, pws_tem)
+    scores_combine_tem = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_tem, scores_tem)]
+    metrics.metric_permission_based_outlier(scores_combine_tem, labels_tem, permission_names)
+    metrics.metric_overall_outlier(scores_tem, cws_tem, labels_tem)
 
 
 def main():
-    fd_data = os.path.join("data", "autoencoder")
-    target_labels = ["NETWORK", "LOCATION", "MICROPHONE", "SMS", "CAMERA", "CALL", "STORAGE", "CONTACTS"]
-
-    fd_testing_benign = os.path.join(fd_data, "testing", "benign")
-    fp_teb = os.path.join(fd_testing_benign, "results.pkl")
-    fd_testing_malicious = os.path.join(fd_data, "testing", "malicious")
-    fp_tem = os.path.join(fd_testing_malicious, "results.pkl")
-
-    # load co-attention model
-    print("loading model")
-    fp_model = os.path.join(fd_data, "model.h5")
-    extract_f, extract_p = load_model(fp_model)
-
-    # training
-    fd_training = os.path.join(fd_data, "training")
-    detectors, knn_trees, meta, f_labels = training(fd_training, target_labels, extract_f)
-
-    # testing
-    print("testing benign")
-    marks_teb, scores_teb, nws_teb, pws_teb = testing(
-        fd_testing_benign, meta, target_labels, extract_f, extract_p, detectors, knn_trees, f_labels
-    )
-    save_pkl_data(fp_teb, [marks_teb, scores_teb, nws_teb, pws_teb])
-    print("testing malicious")
-    marks_tem, scores_tem, nws_tem, pws_tem = testing(
-        fd_testing_malicious, meta, target_labels, extract_f, extract_p, detectors, knn_trees, f_labels
-    )
-    save_pkl_data(fp_tem, [marks_tem, scores_tem, nws_tem, pws_tem])
-
-    # evaluation
-    print()
-    print("evaluate benign")
-    marks_teb, scores_teb, nws_teb, pws_teb = load_pkl_data(fp_teb)
-    cws_teb = weight_combine(nws_teb, [[1.0 - w for w in ws] for ws in pws_teb])
-    scores_combine_teb = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_teb, scores_teb)]
-    metric_permission_based_outlier(scores_combine_teb, marks_teb, target_labels)
-    metric_overall_outlier(scores_teb, cws_teb, marks_teb, None)
-
-    print()
-    print("evaluate malicious")
-    marks_tem, scores_tem, nws_tem, pws_tem = load_pkl_data(fp_tem)
-    cws_tem = weight_combine(nws_tem, [[1.0 - w for w in ws] for ws in pws_tem])
-    scores_combine_tem = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_tem, scores_tem)]
-    metric_permission_based_outlier(scores_combine_tem, marks_tem, target_labels)
-    metric_overall_outlier(scores_tem, cws_tem, marks_tem, None)
+    total_example()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
