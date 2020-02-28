@@ -53,72 +53,102 @@ def plot_precision_recall(title, x, py, ry, path_save=None):
 # =========================
 
 
-def metric_permission_based_outlier(scores, marks, target_labels, title=None):
+def metric_permission_based_outlier(scores, marks, target_permissions, title=None):
+    """Metric and print permission based outlier scores, i.e., precision/recall and AUC value.
+
+    :param scores:
+        List, scores(i, j) of each widget(i) in each permission(j).
+    :param marks:
+        List, outlier marks(i, j) of each widget(i) in each permission(j).
+        The value could be 0 (not related to the permission), 1 (outlier), -1 (inlier).
+    :param target_permissions:
+        List of string, the `j`th permission name.
+    :param title:
+        String, file name used to save the plot, `None` means not to save.
+
+    :return: None
+    """
     from pyod.utils.utility import get_label_n
     from sklearn.metrics.ranking import roc_auc_score
     from sklearn.metrics.classification import precision_score, recall_score
 
-    for i in range(len(target_labels)):
-        label_i = target_labels[i]
+    for i in range(len(target_permissions)):
+        permission_i = target_permissions[i]
 
+        # sort scores in each permission
         scores_i, y_true = [], []
         for j in range(len(scores)):
             if marks[j][i] != 0:
                 scores_i.append(scores[j][i])
                 y_true.append(1 if marks[j][i] == 1 else 0)
 
+        # no positive or negative labels
+        if sum(y_true) == len(scores_i) or sum(y_true) == 0:
+            print('{}({}/{}), error'.format(
+                permission_i, sum(y_true), len(scores_i)
+            ))
+            continue
+
+        # compute precision, recall curve and auc value
         pk, rk = [], []
         for k in range(1, len(y_true)):
             y_predict = get_label_n(y_true, scores_i, k)
             pk.append(precision_score(y_true, y_predict))
             rk.append(recall_score(y_true, y_predict))
+        auc = roc_auc_score(y_true, scores_i)
 
-        n = sum(y_true) - 1
-        if 0 <= n < len(pk):
-            # print(y_true)j
-            # print(scores_i)
-            print('{}@{}/{}'.format(label_i, n, len(scores_i)), pk[n], rk[n], roc_auc_score(y_true, scores_i))
-        else:
-            print('{}@{}/{}'.format(label_i, n, len(scores_i)), 0.0, 0.0, 0.0)
+        # print top-k precision, recall, and AUC value
+        k = sum(y_true)
+        print('{}({}/{}), p/r: {}, AUC: {}'.format(
+            permission_i, k, len(scores_i), round(pk[k - 1], 4), round(auc, 4)
+        ))
 
+        # save plot
         if title is not None:
-            fp_save = os.path.join('results_weighted', title)
-            plot_curve('{}_{}_precision'.format(title, label_i), 'precision', list(range(1, len(y_true))), pk,
-                       path_save=fp_save + '_{}_precision.pdf'.format(label_i))
-            plot_curve('{}_{}_recall'.format(title, label_i), 'recall', list(range(1, len(y_true))), rk,
-                       path_save=fp_save + '_{}_recall.pdf'.format(label_i))
+            path_save = os.path.join('{}-{}.pdf'.format(title, permission_i))
+            plot_precision_recall(
+                permission_i, list(range(1, len(y_true))), pk, rk, path_save
+            )
 
 
-def metric_overall_outlier(scores, weights, marks, title=None):
+def metric_overall_outlier(scores, marks, title=None):
+    """Metric global outlier results, i.e., precision/recall and AUC value.
+
+    :param scores:
+        List, summed scores of each widget(i).
+    :param marks:
+        List, outlier marks(i, j) of each widget(i) in each permission(j).
+        The value could be 0 (not related to the permission), 1 (outlier), -1 (inlier).
+        If there is one outlier in the related permission, then the widget is outlier.
+    :param title:
+        String, file name used to save the plot, `None` means not to save.
+
+    :return: None
+    """
     from pyod.utils.utility import get_label_n
     from sklearn.metrics.ranking import roc_auc_score
     from sklearn.metrics.classification import precision_score, recall_score
 
-    y_true = []
-    weighted_scores = []
-    for i in range(len(scores)):
-        score = 0.0
-        for w, s, m in zip(weights[i], scores[i], marks[i]):
-            score += w * s
+    # get global outlier mark
+    y_true = [1 if 1 in marks[i] else 0 for i in range(len(scores))]
 
-        # print(1 if 'n' in marks[i] else 0, score, scores[i], weights[i], marks[i])
-        weighted_scores.append(score)
-        y_true.append(1 if 1 in marks[i] else 0)
-
+    # compute precision, recall curve and auc value
     pk, rk = [], []
     for k in range(1, len(y_true)):
-        y_predict = get_label_n(y_true, weighted_scores, k)
+        y_predict = get_label_n(y_true, scores, k)
         pk.append(precision_score(y_true, y_predict))
         rk.append(recall_score(y_true, y_predict))
-    n = sum(y_true)
-    print('overall@{}'.format(n), len(y_true), pk[n], rk[n], roc_auc_score(y_true, weighted_scores))
+    auc = roc_auc_score(y_true, scores)
 
+    # print top-k precision, recall, and AUC value
+    k = sum(y_true)
+    print('overall({}/{}), p/r: {}, AUC: {}'.format(
+        k, len(y_true), round(pk[k - 1], 4), round(auc, 4)
+    ))
+
+    # save plot
     if title is not None:
-        fp_save = os.path.join('results', 'overall_' + title)
-        # plot_curve('overall_{}_precision'.format(title), 'precision', list(range(1, len(y_true))), pk,
-        #            fp_save=fp_save + '_precision.pdf')
-        # plot_curve('overall_{}_recall'.format(title), 'recall', list(range(1, len(y_true))), rk,
-        #            fp_save=fp_save + '_recall.pdf')
+        path_save = os.path.join('{}.pdf'.format(title))
         plot_precision_recall(
-            '', list(range(1, len(y_true))), pk, rk, path_save=fp_save + '.pdf'
+            'Overall', list(range(1, len(y_true))), pk, rk, path_save
         )

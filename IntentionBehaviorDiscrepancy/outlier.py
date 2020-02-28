@@ -220,6 +220,8 @@ def distance_euclidean(x0, x1):
 
 
 def weight_combine(ws1, ws2):
+    """Combine two weights.
+    """
     assert len(ws1) == len(ws2)
     cws = []  # combined weights
     for i in range(len(ws1)):
@@ -230,10 +232,28 @@ def weight_combine(ws1, ws2):
     return cws
 
 
-def training(path_data, img_shape, re_sample_type, text_len, permission_names, extract_f):
+def compute_weighted_scores(scores, weights):
+    """Combine scores and weights.
+    """
+    weighted_scores = []
+    for i in range(len(scores)):
+        score_i = []
+        for s, w in zip(scores[i], weights[i]):
+            score_i.append(w * s)
+        weighted_scores.append(score_i)
+    return weighted_scores
+
+
+def sum_weighted_scores(scores):
+    """Add up scores with weights as global outlier scores.
+    """
+    sum_scores = [sum(scores[i]) for i in range(len(scores))]
+    return sum_scores
+
+
+def training(data, img_shape, re_sample_type, text_len, permission_names, extract_f):
     # load training data
-    print('loading training data')
-    data = load_pkl_data(path_data)  # img_data, tokens, perms
+    print('preparing training data')
     inputs, permissions = prepare_training_data(
         data, img_shape, re_sample_type, text_len, permission_names
     )
@@ -266,10 +286,9 @@ def training(path_data, img_shape, re_sample_type, text_len, permission_names, e
     return detectors, knn_trees, features_in_permissions
 
 
-def testing(path_data, img_shape, re_sample_type, text_len, permission_names,
+def testing(data, img_shape, re_sample_type, text_len, permission_names,
             extract_f, extract_p, detectors, knn_trees, features_in_labels):
-    # load testing data
-    data = load_pkl_data(path_data)  # img_data, tokens, perms, outlier_labels
+    # preparing testing data
     inputs, permissions, outlier_labels = prepare_testing_data(
         data, img_shape, re_sample_type, text_len, permission_names
     )
@@ -287,9 +306,10 @@ def testing(path_data, img_shape, re_sample_type, text_len, permission_names,
             p_name = permission_names[p_index]
             if p_name in permissions[i]:
                 score.append(detectors[p_index].decision_function([features[i]])[0])
+                nw.append(weight_knn(knn_trees[p_index], features[i], features_in_labels[p_index]))
             else:
                 score.append(0.0)
-            nw.append(weight_knn(knn_trees[p_index], features[i], features_in_labels[p_index]))
+                nw.append(0.0)
         scores.append(score)
         neighbour_weights.append(nw)
 
@@ -297,52 +317,60 @@ def testing(path_data, img_shape, re_sample_type, text_len, permission_names,
 
 
 def total_example():
+    # absolute folder of data
     path_current = os.path.dirname(os.path.abspath(__file__))
     path_data = os.path.join(path_current, '..', 'data', 'total')
 
-    # load meta data
+    # path of model, training, testing data
     path_meta = os.path.join(path_data, 'deepintent.meta')
+    path_model = os.path.join(path_data, 'deepintent.model')
+    path_training = os.path.join(path_data, 'outlier.training.pkl')
+    path_testing_benign = os.path.join(path_data, 'outlier.testing.benign.pkl')
+    path_testing_malicious = os.path.join(path_data, 'outlier.testing.malicious.pkl')
+
+    # load meta data
     image_shape, re_sample_type, text_len, permission_names = load_meta(
         path_meta
     )
 
     # load co-attention model
     print('loading model')
-    path_model = os.path.join(path_data, 'deepintent.model')
     extract_f, extract_p = load_model(path_model)
 
     # training
-    path_training = os.path.join(path_data, 'training.save.pkl')
+    _, data_tr = load_pkl_data(path_training)  # [v2id, l2id], [[img_data, tokens, perms], ...]
     detectors, knn_trees, features_in_permissions = training(
-        path_training, image_shape, re_sample_type, text_len, permission_names, extract_f
+        data_tr, image_shape, re_sample_type, text_len, permission_names, extract_f
     )
 
     # testing and evaluation
     # benign
     print('testing benign')
-    path_testing_benign = os.path.join(path_data, 'benign.save.pkl')
+    _, data_teb = load_pkl_data(path_testing_benign)  # [v2id, l2id], [[img_data, tokens, perms, outlier_labels], ...]
     scores_teb, nws_teb, pws_teb, labels_teb = testing(
-        path_testing_benign, image_shape, re_sample_type, text_len, permission_names,
+        data_teb, image_shape, re_sample_type, text_len, permission_names,
         extract_f, extract_p, detectors, knn_trees, features_in_permissions
     )
     print('evaluate benign')
     cws_teb = weight_combine(nws_teb, pws_teb)
-    scores_combine_teb = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_teb, scores_teb)]
-    metrics.metric_permission_based_outlier(scores_combine_teb, labels_teb, permission_names)
-    metrics.metric_overall_outlier(scores_teb, cws_teb, labels_teb)
+    weighted_scores_teb = compute_weighted_scores(scores_teb, cws_teb)
+    global_scores_teb = sum_weighted_scores(weighted_scores_teb)
+    metrics.metric_permission_based_outlier(weighted_scores_teb, labels_teb, permission_names)
+    metrics.metric_overall_outlier(global_scores_teb, labels_teb)
 
     # malicious
     print('testing malicious')
-    path_testing_malicious = os.path.join(path_data, 'malicious.save.pkl')
+    _, data_tem = load_pkl_data(path_testing_malicious)
     scores_tem, nws_tem, pws_tem, labels_tem = testing(
-        path_testing_malicious, image_shape, re_sample_type, text_len, permission_names,
+        data_tem, image_shape, re_sample_type, text_len, permission_names,
         extract_f, extract_p, detectors, knn_trees, features_in_permissions
     )
     print('evaluate malicious')
     cws_tem = weight_combine(nws_tem, pws_tem)
-    scores_combine_tem = [[w * s for w, s in zip(ws, ss)] for ws, ss in zip(cws_tem, scores_tem)]
-    metrics.metric_permission_based_outlier(scores_combine_tem, labels_tem, permission_names)
-    metrics.metric_overall_outlier(scores_tem, cws_tem, labels_tem)
+    weighted_scores_tem = compute_weighted_scores(scores_tem, cws_tem)
+    global_scores_tem = sum_weighted_scores(weighted_scores_tem)
+    metrics.metric_permission_based_outlier(weighted_scores_tem, labels_tem, permission_names)
+    metrics.metric_overall_outlier(global_scores_tem, labels_tem)
 
 
 def main():
