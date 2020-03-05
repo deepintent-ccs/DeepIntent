@@ -29,3 +29,9 @@ There are mainly 1 executable Python scripts as entry point:
 ### Outlier
 
 Load the pre-trained deep learning model to extract co-attentioned features and prediction results. Then, train and test the outlier detection model. Directly run `python3 outlier.py` will handle the data stored in `data/total`, which could be download from the BaiduYun.
+
+1. Training process
++ Input
++ Output
+
+1. Testing process
