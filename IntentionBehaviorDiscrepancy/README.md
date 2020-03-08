@@ -20,7 +20,7 @@ This folder mainly contains the codes to train and evaluate the outlier model. I
 + nltk >= 3.4.0
 + pyod >= 0.7.4
 + sklearn >= 0.21.1
-+ matplotlib >= 3.0.2, optional, to plot precision and recall curve
++ matplotlib >= 3.0.2 (optional, to plot precision and recall curve)
 
 ## Entry Point
 
@@ -31,7 +31,19 @@ There are mainly 1 executable Python scripts as entry point:
 Load the pre-trained deep learning model to extract co-attentioned features and prediction results. Then, train and test the outlier detection model. Directly run `python3 outlier.py` will handle the data stored in `data/total`, which could be download from the BaiduYun.
 
 1. Training process
-+ Input
-+ Output
+
+For each permission, given co-attentioned features, we train an AutoEncoder model to compute outlier score, and build a KNN-Tree to compute neighborhood weights.
+
++ Input.
+Permissions and co-attentioned features.
++ Output.
+AutoEncoder models and KNN-Trees.
 
 1. Testing process
+
+For new data, we use AutoEncoder to compute its outlier score, use `1 - prediction` as prediction weights, use KNN-Tree to compute neighborhood weights. Then combine the weights and scores, and sorted the data according to the combined weights.
+
++ Input.
+List of new data.
++ Output.
+Outlier ranks, and evaluation values (precision, recall and AUC).

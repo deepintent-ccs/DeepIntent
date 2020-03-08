@@ -326,8 +326,8 @@ def total_example():
 
     conf_benign = PreProcessConf(
         # path
-        path_data_in=os.path.join(path_data, 'total', 'raw_data.benign.pkl'),
-        path_data_out=os.path.join(path_data, 'total', 'data.benign.pkl'),
+        path_data_in=os.path.join(path_data, 'example', 'raw_data.benign.pkl'),
+        path_data_out=os.path.join(path_data, 'example', 'data.benign.pkl'),
         # image
         image_min_size=5,
         image_wh_ratio=10,
@@ -339,8 +339,8 @@ def total_example():
 
     conf_mal = PreProcessConf(
         # path
-        path_data_in=os.path.join(path_data, 'total', 'raw_data.mal.pkl'),
-        path_data_out=os.path.join(path_data, 'total', 'data.mal.pkl'),
+        path_data_in=os.path.join(path_data, 'example', 'raw_data.mal.pkl'),
+        path_data_out=os.path.join(path_data, 'example', 'data.mal.pkl'),
         # image
         image_min_size=5,
         image_wh_ratio=10,

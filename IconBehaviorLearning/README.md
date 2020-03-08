@@ -31,12 +31,40 @@ There are mainly 3 executable Python scripts as entry points:
 
 ### Pre-process
 
-Pre-process the raw data that obtained from the contextual text extraction. Directly run `python3 pre_process.py` can handle the data stored in `data/total`, which could be download from the BaiduYun.
+Pre-process the raw data that obtained from the contextual text extraction.
+It filtered strange data (e.g., no image or image is two small), tokenize texts and generate vocabulary, mapping permissions to permission groups, and so on.
+
++ Input.
+Raw data after contextual text extraction (in PKL format).
++ Output.
+Data like `[vocab2id dict, label2id dict (permission groups), [pre-processed data]]`, saved in PKL format.
+
+Directly run `python3 pre_process.py` will handle the example results of contextual text extraction (with parameter `--total-example`), please make sure results (i.e., `raw_data.benign.pkl` and `raw_data.mal.pkl`) are stored in `data/example` folder. The output will be saved in the same folder with name `data.benign.pkl` and `data.mal.pkl`.
+
+Note that, the example APKs are much more smaller than the real data set, use them to train might mislead the model, so we provided the total data set to train. The total data set could be download from BaiduYun.
 
 ### Train
 
-Currently, you may directly run `python3 train.py` can train the model based on the pre-processed benign data.
+Split pre-processed data into training, validation and testing sets.
+Training and testing the model several times (default is 3 times) and report each time's precision, recall and averaged metrics results.
+
++ Input.
+Pre-processed data, and optional, model structure configuration (hidden layer dims, number of dense blocks, and so on) and training configuration (data split ratio, training patients, and so on).
++ Output.
+Evaluation results, and
+trained model with training configuration as meta data.
+
+To run the program, please first download pre-processed data from BaiduYun.
+Then, directly run `python3 train.py`, which could train the model based on the pre-processed benign data.
 
 ### Predict
 
-Currently, you may directly run `python3 predict.py` can load the pre-trained model and predict the malicious data.
+Load the trained model and evaluate with given/input data.
+
++ Input.
+The trained model, model's meta data and the pre-processed data to be predicted.
++ Output.
+Evaluation results, and prediction vectors (also provided real labels to review).
+
+To run the program, please first download pre-processed data from BaiduYun.
+Then, directly run `python3 predict.py`, which could load the pre-trained model and predict corresponding split testing data.
