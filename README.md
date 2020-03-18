@@ -62,7 +62,7 @@ DeepIntent contains three major components.
 
 1. The first step is to run static analysis on Android apps, obtain the association results of UI widgets and icons from .xml files, their handlers and API calls in the source code, and corresponding permission uses. Detailed instruction is shown in [IconWidgetAnalysis](IconWidgetAnalysis).
 
-We provided several example APKs, including both benign apps and malicious apps, through BaiduYun([link](https://pan.baidu.com/s/1mcDk1tDnkI-PdW3kpwZ3lQ), password: 19ah). These APKs are contained in BaiduYun's `example` folder, the structure and usage of this folder could be further refer to [example APKs overview](data/example).
+We provided several example APKs, including both benign apps and malicious apps, through BaiduYun([link](https://pan.baidu.com/s/1E0iE-Nm8xx4qsFB6PnkYwA), password: nmqf). These APKs are contained in BaiduYun's `example` folder, the structure and usage of this folder could be further refer to [example APKs overview](data/example).
 
 2. The second step is to train the deep learning model. It contains model construction, training and testing, and predicting with new data. Detailed instruction is shown in [Icon Behavior Learning](IconBehaviorLearning).
 We also provided data preparing codes, such as [contextual text extraction](IconWidgetAnalysis/ContextualTextExtraction) or [pre-process](IconBehaviorLearning/pre_process.py), for completeness.

@@ -1,6 +1,6 @@
 # Example APKs
 
-This is the example designed to show how to config and run DeepIntent. This example will start from raw input APK files, please download the example APKs from [BaiduYun](https://pan.baidu.com/s/10HSPVJxEOkFOLSQQOiyjbg), whose password is *mxjc*.
+This is the example designed to show how to config and run DeepIntent. This example will start from raw input APK files, please download the example APKs from [BaiduYun](https://pan.baidu.com/s/1E0iE-Nm8xx4qsFB6PnkYwA), whose password is *nmqf*.
 
 ## Structure
 

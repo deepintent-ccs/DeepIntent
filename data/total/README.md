@@ -1,8 +1,14 @@
 # Total data set
 
-This is the total data set used in our experiments, contains pre-processed `<icon, texts, permissions>` triples and manually marked outliers. The corresponding program will start from training the deep learning model and then detect intention behavior discrepancies. Please download the total data set from [BaiduYun](https://pan.baidu.com/s/10HSPVJxEOkFOLSQQOiyjbg), whose password is *mxjc*, and put the contains in current folder.
+This is the total data set used in our experiments, contains pre-processed `<icon, texts, permissions>` triples and manually marked outliers. The corresponding program will start from training the deep learning model and then detect intention behavior discrepancies. Please download the total data set from [BaiduYun](https://pan.baidu.com/s/1E0iE-Nm8xx4qsFB6PnkYwA), whose password is *nmqf*, and put the contains in current folder.
 
 ## Structure
+
++ permission_benign.csv.zip
+Program analysis results of all benign apps. 
+
++ permission_malicious.csv.zip
+Program analysis results of all malicious apps.
 
 + benign.total.pkl
 All the `<icon, texts, permissions>` triples extracted from benign apps.
