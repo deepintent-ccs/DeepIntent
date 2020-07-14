@@ -164,7 +164,7 @@ def total_example():
         # train (and test) the model
         code_name='example', repeat_times=3, random_seed=666,
         # path
-        path_data=os.path.join(path_data, 'total', 'benign.total.pkl'),
+        path_data=os.path.join(path_data, 'total', 'data.benign.pkl'),
         path_output=os.path.join(path_data, 'total', '_output'),
         # data partition
         train_ratio=0.7, valid_ratio=0.1, test_ratio=0.2, is_data_refresh=True,
