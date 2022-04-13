@@ -1,6 +1,6 @@
 # Total data set
 
-This is the total data set used in our experiments, contains pre-processed `<icon, texts, permissions>` triples and manually marked outliers. The corresponding program will start from training the deep learning model and then detect intention behavior discrepancies. Please download the total data set from [BaiduYun](https://pan.baidu.com/s/1E0iE-Nm8xx4qsFB6PnkYwA), whose password is *nmqf*, and put the contains in current folder.
+This is the total data set used in our experiments, contains pre-processed `<icon, texts, permissions>` triples and manually marked outliers. The corresponding program will start from training the deep learning model and then detect intention behavior discrepancies. Please download the total data set from [BaiduYun](https://pan.baidu.com/s/1E0iE-Nm8xx4qsFB6PnkYwA) (password: *nmqf*) or [Dropbox](https://www.dropbox.com/sh/0ba30ay99ora50b/AACG-nszNCGEDs9fDor75JI3a?dl=0), and put the contains in current folder.
 
 ## Structure
 
